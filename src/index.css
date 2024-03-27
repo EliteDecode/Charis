@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: rofane;
+  src: url("./assets/fonts/rofane.ttf");
+}
+
+@font-face {
+  font-family: nexa;
+  src: url("./assets/fonts/nexa.otf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: rofane;
+}
+p,
+span,
+li,
+a {
+  font-family: nexa;
+}
+.select-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  pointer-events: none; /* Ensures the arrow doesn't interfere with clicking on the select */
+}
+
+.stats {
+  background: url("/public/dining-room-in-a-coffee-shop-2023-11-27-05-05-18-utc\ 1.png");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+
+.react-multi-carousel-dot--active button {
+  background: #ffc50a !important;
+}
+.react-multi-carousel-dot button {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 1;
+  padding: 5px 5px 5px 5px;
+  box-shadow: none;
+  transition: background 0.5s;
+  border-width: 2px;
+  border-style: solid;
+  border-color: grey;
+  padding: 0;
+  margin: 0;
+  margin-right: 6px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.poster {
+  background: url("/public/3d-illustration-mockup-photo-frame-in-living-room-2023-11-27-05-18-18-utc\ 1.png");
+  background-color: #000000c9;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.carousel .control-dots {
+  position: absolute !important;
+  bottom: 300 !important;
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+.herobg {
+  background: url("/public/minimalist-interior-design 1.png");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+.bookConsultbg {
+  background: url("/public/minimalist-interior-design 1.png");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+
+.custom-container {
+  width: 88%;
+  margin: auto;
+}
+
+.bg-service {
+  height: 160vh;
+  background: url("/public/servicebg.jpeg");
+  background-size: 100% 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: overlay;
+}
+
+@media only screen and (max-width: 575px) {
+  .custom-container {
+    width: 96% !important;
+    margin: auto;
+  }
+
+  .bg-service {
+    height: 100%;
+    padding: 5% 0% !important;
+    background: url("/public/servicebg.jpeg");
+    background-size: 100% 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: overlay;
+  }
+}
+
+.interiorBg {
+  background: url("/public/servicebg.jpeg");
+  background-size: cover;
+  background-color: #00000080;
+  background-blend-mode: overlay;
+}
+
+.consult-bg {
+  background: url("/public/consultbg.jpeg");
+  background-color: #00000080;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-position: 0px -600px;
+}
