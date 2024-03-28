@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutUsContentCard } from "./AboutUsContentCard";
+import { AboutUsContentCard } from "./About/AboutUsContentCard";
 
 const ServiceBanner = () => {
   return (

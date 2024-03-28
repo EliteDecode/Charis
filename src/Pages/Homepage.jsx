@@ -9,7 +9,7 @@ import ContactSection from "../ui/ContactSection.jsx";
 import ProjectGalleryHome from "../ui/ProjectGalleryHome.jsx";
 import TheArtOfBeautifulLiving from "../ui/TheArtOfBeautifulLiving.jsx";
 import ServicesSection from "../ui/ServicesSection.jsx";
-import AboutSection from "../ui/AboutSection.jsx";
+import AboutSection from "../ui/About/AboutSection.jsx";
 
 // Images
 

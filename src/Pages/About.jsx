@@ -2,11 +2,12 @@ import StatisticsSection from "../ui/StatisticsSection.jsx";
 import PosterComponent from "../ui/PosterComponent.jsx";
 import ContactForm from "../ui/ContactForm.jsx";
 import ContactSection from "../ui/ContactSection.jsx";
-import AboutUSBanner from "../ui/AboutUSBanner.jsx";
-import AboutVideo from "../ui/AboutVideo.jsx";
-import { AboutUsContentCard } from "../ui/AboutUsContentCard.jsx";
-import AboutUsExperience from "../ui/AboutUsExperience.jsx";
+import AboutUSBanner from "../ui/About/AboutUSBanner.jsx";
+import AboutVideo from "../ui/About/AboutVideo.jsx";
+import { AboutUsContentCard } from "../ui/About/AboutUsContentCard.jsx";
+
 import OurTeam from "../ui/OurTeam.jsx";
+import AboutUsExperience from "../ui/About/AboutUsExperience.jsx";
 
 // Images
 

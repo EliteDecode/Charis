@@ -130,6 +130,13 @@ a {
     background-color: rgba(255, 255, 255, 0.6);
     background-blend-mode: overlay;
   }
+  .projectBg {
+    background: url("/public/projectbg.jpg");
+    background-size: cover;
+    background-color: #00000080;
+    background-blend-mode: overlay;
+    background-position: 0px 0px !important;
+  }
 }
 
 .interiorBg {
@@ -145,4 +152,43 @@ a {
   background-size: cover;
   background-blend-mode: overlay;
   background-position: 0px -600px;
+}
+
+.projectBg {
+  background: url("/public/projectbg.jpg");
+  background-size: cover;
+  background-color: #00000080;
+  background-blend-mode: overlay;
+  background-position: 0px -200px;
+}
+
+.project_info_bg {
+  background: url("/public/projectbg.jpg");
+  background-size: cover;
+  background-color: #00000080;
+  background-blend-mode: overlay;
+  background-position: 0px 0px;
+}
+
+.startProject-bg {
+  background: url("/public/startProjectBg.jpg");
+  background-color: #00000080;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-position: 0px -600px;
+}
+
+.loginBg {
+  background: url("/public/The Simple Serenity of Soft Minimalism 1.png");
+  background-color: #ffffff80;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.signupbg {
+  background: url("/public/signupbg.jpg");
+  background-color: #ffffff95;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-position: 0px -400px;
 }

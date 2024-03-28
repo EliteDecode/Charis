@@ -6,11 +6,16 @@ import map from "/public/Frame.png";
 
 function Contact() {
   return (
-    <div className="flex justify-center">
-      <div className="w-[1512px] px-20 h-[1162px] bg-[#F2F2F2] mt-[9.5rem]">
+    <div className="mt-[9.5rem]">
+      <div className=" bg-[#F2F2F2]">
         <ContactHeader />
         <ContactForm />
-        <img className="mt-32" src={map} alt="" />
+        <img
+          className="my-32 h-[70vh]"
+          style={{ width: "100%", margin: "auto" }}
+          src={map}
+          alt=""
+        />
         <ContactSection />
       </div>
     </div>

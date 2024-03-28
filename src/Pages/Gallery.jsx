@@ -1,15 +1,18 @@
-import GalleryHeader from "../ui/GalleryHeader";
-import GalleryPictures from "../ui/GalleryPictures";
+import GalleryHeader from "../ui/Gallery/GalleryHeader";
+import GalleryPictures from "../ui/Gallery/GalleryPictures";
 import ContactForm from "../ui/ContactForm";
 import ContactSection from "../ui/ContactSection";
 
 function Gallery() {
   return (
-    <div className="flex justify-center">
-      <div className="max-w-[1512px] px-20  mt-[9.5rem]">
+    <div className="">
+      <div className="">
         <GalleryHeader />
-        <GalleryPictures />
+        {/* <GalleryPictures />
+         {/* Get in Touch section */}
         <ContactForm />
+
+        {/* Let’s Talk section */}
         <ContactSection />
       </div>
     </div>

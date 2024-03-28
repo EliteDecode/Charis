@@ -51,7 +51,7 @@ export default function TabsGallery() {
   return (
     <Box sx={{ width: "100%" }}>
       <Box
-        className="sm:w-[55%] w-[95%] m-auto"
+        className="sm:w-[41%] w-[95%] m-auto"
         sx={{
           borderBottom: 1,
           borderColor: "divider",
@@ -72,10 +72,10 @@ export default function TabsGallery() {
           }}
           className="flex items-center justify-center "
           aria-label="basic tabs example">
-          <Tab label="  Living room Interior" {...a11yProps(0)} />
-          <Tab label="  Kitchen Interior" {...a11yProps(1)} />
-          <Tab label="  Room Interior" {...a11yProps(2)} />
-          <Tab label="    Office Interior" {...a11yProps(3)} />
+          <Tab label="  Living room " {...a11yProps(0)} />
+          <Tab label="  Kitchen " {...a11yProps(1)} />
+          <Tab label="  Room " {...a11yProps(2)} />
+          <Tab label="    Office " {...a11yProps(3)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>

@@ -6,7 +6,9 @@ import logoImg from "../../public/Chariz Interiors 1.png";
 import mailIcon from "/public/mail-01.png";
 import lockIcon from "/public/square-lock-02.png";
 import eyeBrown from "/public/view-off.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { Box, Grid } from "@mui/material";
+import { Phone } from "@mui/icons-material";
 
 function Signup() {
   const [showPasswordPhoneNumber, setShowPasswordPhoneNumber] = useState(false);
@@ -26,97 +28,78 @@ function Signup() {
     setShowPasswordConfirmPassword((showPassword) => !showPassword);
   };
   return (
-    <div className="flex items-center justify-center">
-      <div className="max-w-[1512px] w-full mx-auto">
-        <div className="relative flex flex-col items-center px-8 md:px-12 lg:px-16 py-12 md:py-16 lg:py-20">
-          <img
-            className="absolute left-4 md:left-14 top-4 md:top-5"
-            src={logoImg}
-            alt=""
-          />
-          <div className="flex flex-col items-center w-full xl:px-56 2xl:px-72 lg:px-48 md:px-32">
-            <div className="flex items-center justify-between w-full mt-40">
-              <h6 className="text-[20px]">Welcome</h6>
+    <div className="signupbg">
+      <div className=" w-full mx-auto">
+        <div className="relative py-12">
+          <div className="custom-container">
+            <Link to="/">
+              <img className="" src={logoImg} alt="" />
+            </Link>
+          </div>
+          <div className="sm:w-[45%] mt-5 m-auto w-[90%]">
+            <div className="flex items-center justify-between w-full">
+              <h6 className="text-[18px]">Welcome</h6>
               <NavLink to="/login">
-                <p className="text-[20px] text-[#FFC50A]">Login</p>
+                <p className="text-[18px] text-[#FFC50A]">Login</p>
               </NavLink>
             </div>
-            <h1 className="text-[33px] mt-4 md:mt-8 lg:mt-12 flex items-center justify-start w-full">
-              Create an account
-            </h1>
-            <form className="flex flex-col items-center gap-4 w-full max-w-md md:max-w-lg lg:max-w-xl mt-4 md:mt-8 lg:mt-12">
-              <div className="flex flex-col items-center justify-center gap-4 md:flex-row lg:flex-row md:gap-8 lg:gap-12">
-                <div className="flex flex-col items-center gap-3">
+            <h1 className="text-[25px]  w-full">Create an account</h1>
+            <form className="">
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={12} md={6}>
                   <div className="relative">
                     <label
                       htmlFor="fullName"
-                      className="text-[20px] text-[#777777]"
-                    >
+                      className="text-[15px] text-[#777777]">
                       Full Name
                     </label>
                     <div className="flex items-center">
                       <input
                         id="fullName"
-                        className="max-w-[369px] lg:w-[369px] w-full h-[63px] px-12 pb-1 border border-[#777777]"
+                        className=" w-full h-[50px] b-white px-12 pb-1 border border-[#777777]"
                         type="text"
                       />
                       <img
-                        className="absolute top-11 left-3"
+                        className="absolute top-10.5 left-3 w-[6%]"
                         src={mailIcon}
                         alt=""
                       />
                     </div>
                   </div>
-
+                </Grid>
+                <Grid item xs={12} sm={12} md={6}>
                   <div className="relative">
                     <label
                       htmlFor="phoneNumber"
-                      className="text-[20px] text-[#777777]"
-                    >
+                      className="text-[15px] text-[#777777]">
                       Phone Number
                     </label>
-                    <div className="relative max-w-[369px] w-full h-[63px] mt-1 ">
+                    <div className="relative w-full h-[50px]">
                       <input
                         id="phoneNumber"
-                        className="max-w-[369px] lg:w-[369px] w-full h-[63px] px-12 pb-1 border border-[#777777]"
-                        type={showPasswordPhoneNumber ? "text" : "password"}
+                        className=" w-full h-[50px] b-white px-12 pb-1 border border-[#777777]"
                       />
 
-                      <img
-                        className="absolute top-4 left-3"
-                        src={lockIcon}
-                        alt=""
+                      <Phone
+                        className="absolute top-4 left-3 w-[6%]"
+                        style={{ fontSize: "18px", color: "#FFC50A" }}
                       />
-                      {showPasswordPhoneNumber ? (
-                        <IoEyeSharp
-                          color="#FFC50A"
-                          onClick={toggleShowPhoneNumber}
-                          size={25}
-                          className="absolute top-5 right-3  cursor-pointer"
-                        />
-                      ) : (
-                        <img
-                          onClick={toggleShowPhoneNumber}
-                          className="absolute top-5 right-3 cursor-pointer"
-                          src={eyeBrown}
-                          alt=""
-                        />
-                      )}
                     </div>
                   </div>
-
+                </Grid>
+                <Grid item xs={12} sm={12} md={6}>
                   <div className="relative">
-                    <label className="text-[20px] text-[#777777]">
+                    <label className="text-[15px] text-[#777777]">
                       Password
                     </label>
-                    <div className="relative max-w-[369px] w-full h-[63px] mt-1 ">
+                    <div className="relative w-full h-[50px]">
                       <input
-                        className="max-w-[369px] lg:w-[369px] w-full h-[63px] px-12 pb-1 border border-[#777777]"
+                        className=" w-full h-[50px] b-white px-12 pb-1 border border-[#777777]"
                         type={showPasswordPassword ? "text" : "password"}
                       />
 
                       <img
-                        className="absolute top-4 left-3"
+                        className="absolute top-4 left-3 w-[6%]"
                         src={lockIcon}
                         alt=""
                       />
@@ -124,78 +107,77 @@ function Signup() {
                         <IoEyeSharp
                           color="#FFC50A"
                           onClick={toggleShowPassword}
-                          size={25}
+                          size={15}
                           className="absolute top-5 right-3  cursor-pointer"
                         />
                       ) : (
                         <img
                           onClick={toggleShowPassword}
-                          className="absolute top-5 right-3 cursor-pointer"
+                          className="absolute top-5 right-3 cursor-pointer w-[6%]"
                           src={eyeBrown}
                           alt=""
                         />
                       )}
                     </div>
                   </div>
-                </div>
-                <div className="flex flex-col items-center gap-3">
+                </Grid>
+                <Grid item xs={12} sm={12} md={6}>
                   <div className="relative">
                     <label
                       htmlFor="email"
-                      className="text-[20px] text-[#777777]"
-                    >
+                      className="text-[15px] text-[#777777]">
                       Email Address
                     </label>
                     <div className="flex items-center">
                       <input
                         id="email"
-                        className="max-w-[369px] lg:w-[369px] w-full h-[63px] px-12 pb-1 border border-[#777777]"
+                        className=" w-full h-[50px] b-white px-12 pb-1 border border-[#777777]"
                         type="text"
                       />
                       <img
-                        className="absolute top-11 left-3"
+                        className="absolute top-10.5 left-3 w-[6%]"
                         src={mailIcon}
                         alt=""
                       />
                     </div>
                   </div>
-
+                </Grid>
+                <Grid item xs={12} sm={12} md={6}>
                   <div className="relative">
                     <label
                       htmlFor="email"
-                      className="text-[20px] text-[#777777]"
-                    >
+                      className="text-[15px] text-[#777777]">
                       Country
                     </label>
-                    <div className="relative max-w-[369px] w-full h-[63px] mt-1 ">
+                    <div className="relative w-full h-[50px]">
                       <input
-                        className="max-w-[369px] lg:w-[369px] w-full h-[63px] px-12 pb-1 border border-[#777777]"
+                        className=" w-full h-[50px] b-white px-12 pb-1 border border-[#777777]"
                         type="password"
                       />
 
                       <img
-                        className="absolute top-4 left-3"
+                        className="absolute top-4 left-3 w-[6%]"
                         src={lockIcon}
                         alt=""
                       />
                     </div>
                   </div>
-
+                </Grid>
+                <Grid item xs={12} sm={12} md={6}>
                   <div className="relative">
                     <label
                       htmlFor="email"
-                      className="text-[20px] text-[#777777]"
-                    >
+                      className="text-[15px] text-[#777777]">
                       Confirm Password
                     </label>
-                    <div className="relative max-w-[369px] w-full h-[63px] mt-1 ">
+                    <div className="relative w-full h-[50px]">
                       <input
-                        className="max-w-[369px] lg:w-[369px] w-full h-[63px] px-12 pb-1 border border-[#777777]"
+                        className=" w-full h-[50px] b-white px-12 pb-1 border border-[#777777]"
                         type={showPasswordConfirmPassword ? "text" : "password"}
                       />
 
                       <img
-                        className="absolute top-4 left-3"
+                        className="absolute top-4 left-3 w-[6%]"
                         src={lockIcon}
                         alt=""
                       />
@@ -203,24 +185,26 @@ function Signup() {
                         <IoEyeSharp
                           color="#FFC50A"
                           onClick={toggleShowConfirmPassword}
-                          size={25}
+                          size={15}
                           className="absolute top-5 right-3  cursor-pointer"
                         />
                       ) : (
                         <img
                           onClick={toggleShowConfirmPassword}
-                          className="absolute top-5 right-3 cursor-pointer"
+                          className="absolute top-5 right-3 cursor-pointer w-[6%]"
                           src={eyeBrown}
                           alt=""
                         />
                       )}
                     </div>
                   </div>
-                </div>
-              </div>
-              <button className="max-w-[369px] w-full h-[63px] bg-[#FFC50A] mt-5 text-[24px] font-bold">
-                Sign up
-              </button>
+                </Grid>
+              </Grid>
+              <Box className="sm:w-[60%] w-full m-auto ">
+                <button className=" w-full m-auto h-[50px] b-white bg-[#FFC50A] mt-5 text-[24px] font-bold">
+                  Sign up
+                </button>
+              </Box>
               <div className="flex items-center justify-center text-center mt-5 gap-1">
                 <p className="text-[14px]">Forgot password?</p>
                 <p className="text-[14px] text-[#FFC50A]">Reset here</p>

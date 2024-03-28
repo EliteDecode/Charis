@@ -7,7 +7,7 @@ import PosterComponent from "../ui/PosterComponent.jsx";
 import ContactForm from "../ui/ContactForm.jsx";
 import ContactSection from "../ui/ContactSection.jsx";
 import ServiceBanner from "../ui/ServiceBanner.jsx";
-import { AboutUsContentCard } from "../ui/AboutUsContentCard.jsx";
+import { AboutUsContentCard } from "../ui/About/AboutUsContentCard.jsx";
 import StepsOfUse from "../ui/StepsOfService.jsx";
 import ConsultationBanner from "../ui/ConsultationBanner.jsx";
 import ConsultationExpections from "../ui/ConsultationExpections.jsx";
