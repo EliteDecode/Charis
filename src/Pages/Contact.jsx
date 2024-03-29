@@ -1,12 +1,16 @@
+import { useEffect } from "react";
 import ContactForm from "../ui/ContactForm";
 import ContactHeader from "../ui/ContactHeader";
 import ContactSection from "../ui/ContactSection";
 
-import map from "/public/Frame.png";
+import map from "/Frame.png";
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="mt-[9.5rem]">
+    <div className="mt-[0.2rem]">
       <div className=" bg-[#F2F2F2]">
         <ContactHeader />
         <ContactForm />

@@ -1,10 +1,10 @@
 import React from "react";
-import serviceImage1 from "/public/3d-room-decor-with-furniture-minimalist-beige-tones (2) 6.png";
-import serviceImage2 from "/public/3d-room-decor-with-furniture-minimalist-beige-tones (2) 6 (1).png";
-import serviceImage3 from "/public/3d-room-decor-with-furniture-minimalist-beige-tones (2) 6 (2).png";
-import serviceImage4 from "/public/3d-room-decor-with-furniture-minimalist-beige-tones (2) 6 (3).png";
-import vectorIcon from "/public/Vector.png";
-import groupIcon from "/public/Group 4 (1).png";
+import serviceImage1 from "/3d-room-decor-with-furniture-minimalist-beige-tones (2) 6.png";
+import serviceImage2 from "/3d-room-decor-with-furniture-minimalist-beige-tones (2) 6 (1).png";
+import serviceImage3 from "/3d-room-decor-with-furniture-minimalist-beige-tones (2) 6 (2).png";
+import serviceImage4 from "/3d-room-decor-with-furniture-minimalist-beige-tones (2) 6 (3).png";
+import vectorIcon from "/Vector.png";
+import groupIcon from "/Group 4 (1).png";
 import { Grid } from "@mui/material";
 
 export const AboutUsContentCard = () => {

@@ -1,5 +1,5 @@
-import ViewMoreImage from "/public/Group 4 (1).png";
-import TabsGallery from "../Components/TabsGallary";
+import ViewMoreImage from "/Group 4 (1).png";
+import TabsGallery from "../helpers/TabsGallary";
 
 function ProjectGalleryHome() {
   return (

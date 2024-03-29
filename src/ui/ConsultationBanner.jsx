@@ -1,5 +1,5 @@
 import React from "react";
-import groupIcon from "/public/Group 4.png";
+import groupIcon from "/Group 4.png";
 
 const ConsultationBanner = () => {
   return (

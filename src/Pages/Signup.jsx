@@ -2,10 +2,10 @@ import { useState } from "react";
 
 import { IoEyeSharp } from "react-icons/io5";
 
-import logoImg from "../../public/Chariz Interiors 1.png";
-import mailIcon from "/public/mail-01.png";
-import lockIcon from "/public/square-lock-02.png";
-import eyeBrown from "/public/view-off.png";
+import logoImg from "/Chariz Interiors 1.png";
+import mailIcon from "/mail-01.png";
+import lockIcon from "/square-lock-02.png";
+import eyeBrown from "/view-off.png";
 import { Link, NavLink } from "react-router-dom";
 import { Box, Grid } from "@mui/material";
 import { Phone } from "@mui/icons-material";

@@ -1,7 +1,7 @@
 import React from "react";
-import groupIcon from "/public/Group 4.png";
+import groupIcon from "/Group 4.png";
 import { Box, Grid } from "@mui/material";
-import forward from "/public/Group 4.png";
+import forward from "/Group 4.png";
 
 const StartProjectBanner = () => {
   return (

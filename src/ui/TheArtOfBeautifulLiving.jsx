@@ -1,9 +1,9 @@
-import InteriorDesignImage from "/public/minimalist-interior-design 1.png";
-import LineImage from "/public/Line 1.png";
-import Group4Image from "/public/Group 4.png";
-import Group4_1Image from "/public/Group 4 (1).png";
-import ArrowNextImage from "/public/Arrow (next).png";
-import ArrowNext1Image from "/public/Arrow (next) (1).png";
+import InteriorDesignImage from "/minimalist-interior-design 1.png";
+import LineImage from "/Line 1.png";
+import Group4Image from "/Group 4.png";
+import Group4_1Image from "/Group 4 (1).png";
+import ArrowNextImage from "/Arrow (next).png";
+import ArrowNext1Image from "/Arrow (next) (1).png";
 import { Grid } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 

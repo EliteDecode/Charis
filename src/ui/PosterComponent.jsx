@@ -1,5 +1,5 @@
-import PosterImage from "/public/poster-frames-mock-up-in-modern-room-interior-in-w-2023-11-27-05-06-31-utc 1.png";
-import Group4Image from "/public/Group 4.png";
+import PosterImage from "/poster-frames-mock-up-in-modern-room-interior-in-w-2023-11-27-05-06-31-utc 1.png";
+import Group4Image from "/Group 4.png";
 import { Carousel } from "react-responsive-carousel";
 
 function PosterComponent() {

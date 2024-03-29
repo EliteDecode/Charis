@@ -12,13 +12,17 @@ import StepsOfUse from "../ui/StepsOfService.jsx";
 import InteriorDesignBanner from "../ui/InteriorDesignBanner.jsx";
 import InteriordDesignSlides from "../ui/InteriorDesignSlides.jsx";
 import InteriorCategories from "../ui/InteriorCategories.jsx";
+import { useEffect } from "react";
 
 // Images
 
 function RinteriorDesign() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="">
-      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[9.5rem] ">
+      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[0.2rem] ">
         {/* Start a Project section */}
         <InteriorDesignBanner />
 

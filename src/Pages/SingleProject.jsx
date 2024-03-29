@@ -7,13 +7,17 @@ import ProjectsSlide from "../ui/Projects/ProjectsSlide.jsx";
 import SingleProjectsBanner from "../ui/Projects/SingleProjectsBanner.jsx";
 import SingleProjectInformation from "../ui/Projects/SingleProjectInformation.jsx";
 import SingleProjectSlider from "../ui/Projects/SingleProjectSlider.jsx";
+import { useEffect } from "react";
 
 // Images
 
 function Projects() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="">
-      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[9.5rem] ">
+      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[0.2rem] ">
         {/* Start a Project section */}
         <SingleProjectsBanner />
 

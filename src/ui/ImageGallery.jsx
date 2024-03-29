@@ -1,9 +1,9 @@
 import { Grid } from "@mui/material";
-import Image1 from "/public/modern-interior-room-with-furniture-2023-11-27-04-51-47-utc 1.png";
-import Image2 from "/public/modern-interior-room-with-furniture-2023-11-27-04-51-47-utc 2.png";
-import Image3 from "/public/modern-interior-room-with-furniture-2023-11-27-04-51-47-utc 3.png";
-import Image4 from "/public/modern-interior-room-with-furniture-2023-11-27-04-51-47-utc 4.png";
-import Image5 from "/public/modern-interior-room-with-furniture-2023-11-27-04-51-47-utc 5.png";
+import Image1 from "/modern-interior-room-with-furniture-2023-11-27-04-51-47-utc 1.png";
+import Image2 from "/modern-interior-room-with-furniture-2023-11-27-04-51-47-utc 2.png";
+import Image3 from "/modern-interior-room-with-furniture-2023-11-27-04-51-47-utc 3.png";
+import Image4 from "/modern-interior-room-with-furniture-2023-11-27-04-51-47-utc 4.png";
+import Image5 from "/modern-interior-room-with-furniture-2023-11-27-04-51-47-utc 5.png";
 
 function ImageGallery() {
   return (

@@ -1,11 +1,11 @@
-import photo1 from "/public/Maximizing Space_ Clever Office Interior Design Solutions for Efficiency.png";
-import photo2 from "/public/The Simple Serenity of Soft Minimalism.png";
-import photo3 from "/public/New Moon - Wall Lamp.png";
-import photo4 from "/public/wall decorations for living room wall decor art wall decor living room ideas.png";
-import photo5 from "/public/_ (3).png";
-import photo6 from "/public/10 Stunning Ideas for the Perfect TV Accent Wall.png";
-import photo7 from "/public/Bespoke Residential Interiors.png";
-import photo8 from "/public/49 Exquisite Japandi Home Office Styles_ The Harmony of Minimalism and Elegance.png";
+import photo1 from "/Maximizing Space_ Clever Office Interior Design Solutions for Efficiency.png";
+import photo2 from "/The Simple Serenity of Soft Minimalism.png";
+import photo3 from "/New Moon - Wall Lamp.png";
+import photo4 from "/wall decorations for living room wall decor art wall decor living room ideas.png";
+import photo5 from "/_ (3).png";
+import photo6 from "/10 Stunning Ideas for the Perfect TV Accent Wall.png";
+import photo7 from "/Bespoke Residential Interiors.png";
+import photo8 from "/49 Exquisite Japandi Home Office Styles_ The Harmony of Minimalism and Elegance.png";
 import Pagination from "../Pagination";
 
 function GalleryPictures() {

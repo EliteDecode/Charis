@@ -1,8 +1,9 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
-import team1 from "/public/team4.png";
+import team1 from "/team4.png";
 
-import team4 from "/public/team1.png";
+import team4 from "/team1.png";
+import { Link } from "react-router-dom";
 
 const OurTeam = () => {
   return (
@@ -12,56 +13,64 @@ const OurTeam = () => {
       </h1>
       <Grid container spacing={2}>
         <Grid item xs={6} sm={6} md={3} className=" ">
-          <Box className=" w-[100%] m-auto mt-10">
-            <img src={team1} alt="" className="rounded-md" />
-            <Box>
-              <p className="font-semibold text-[14px] text-[#1E1E1E]">
-                Olivier Johnson
-              </p>
-              <p className="text-[12px] -mt-1 text-[#1E1E1E]">
-                Creative Director
-              </p>
+          <a href="/team">
+            <Box className=" w-[100%] m-auto mt-10">
+              <img src={team1} alt="" className="rounded-md" />
+              <Box>
+                <p className="font-semibold text-[14px] text-[#1E1E1E]">
+                  Olivier Johnson
+                </p>
+                <p className="text-[12px] -mt-1 text-[#1E1E1E]">
+                  Creative Director
+                </p>
+              </Box>
             </Box>
-          </Box>
+          </a>
         </Grid>
         <Grid item xs={6} sm={6} md={3} className=" ">
-          <Box className=" w-[100%] m-auto mt-10">
-            <img src={team1} alt="" className="rounded-md" />
-            <Box>
-              <p className="font-semibold text-[14px] text-[#1E1E1E]">
-                Olivier Johnson
-              </p>
-              <p className="text-[12px] -mt-1 text-[#1E1E1E]">
-                Creative Director
-              </p>
+          <a href="/team">
+            <Box className=" w-[100%] m-auto mt-10">
+              <img src={team1} alt="" className="rounded-md" />
+              <Box>
+                <p className="font-semibold text-[14px] text-[#1E1E1E]">
+                  Olivier Johnson
+                </p>
+                <p className="text-[12px] -mt-1 text-[#1E1E1E]">
+                  Creative Director
+                </p>
+              </Box>
             </Box>
-          </Box>
+          </a>
         </Grid>
         <Grid item xs={6} sm={6} md={3} className=" ">
-          <Box className=" w-[100%] m-auto mt-10">
-            <img src={team1} alt="" className="rounded-md" />
-            <Box>
-              <p className="font-semibold text-[14px] text-[#1E1E1E]">
-                Olivier Johnson
-              </p>
-              <p className="text-[12px] -mt-1 text-[#1E1E1E]">
-                Creative Director
-              </p>
+          <a href="/team">
+            <Box className=" w-[100%] m-auto mt-10">
+              <img src={team1} alt="" className="rounded-md" />
+              <Box>
+                <p className="font-semibold text-[14px] text-[#1E1E1E]">
+                  Olivier Johnson
+                </p>
+                <p className="text-[12px] -mt-1 text-[#1E1E1E]">
+                  Creative Director
+                </p>
+              </Box>
             </Box>
-          </Box>
+          </a>
         </Grid>
         <Grid item xs={6} sm={6} md={3} className=" ">
-          <Box className=" w-[100%] m-auto mt-10">
-            <img src={team1} alt="" className="rounded-md" />
-            <Box>
-              <p className="font-semibold text-[14px] text-[#1E1E1E]">
-                Olivier Johnson
-              </p>
-              <p className="text-[12px] -mt-1 text-[#1E1E1E]">
-                Creative Director
-              </p>
+          <a href="/team">
+            <Box className=" w-[100%] m-auto mt-10">
+              <img src={team1} alt="" className="rounded-md" />
+              <Box>
+                <p className="font-semibold text-[14px] text-[#1E1E1E]">
+                  Olivier Johnson
+                </p>
+                <p className="text-[12px] -mt-1 text-[#1E1E1E]">
+                  Creative Director
+                </p>
+              </Box>
             </Box>
-          </Box>
+          </a>
         </Grid>
       </Grid>
     </div>

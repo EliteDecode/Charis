@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 import { IoEyeSharp } from "react-icons/io5";
-import mailIcon from "/public/mail-01.png";
-import lockIcon from "/public/square-lock-02.png";
+import mailIcon from "/mail-01.png";
+import lockIcon from "/square-lock-02.png";
 
-import backgroundImage from "../../public/The Simple Serenity of Soft Minimalism.png";
-import logoImg from "../../public/Chariz Interiors 1.png";
+import backgroundImage from "/The Simple Serenity of Soft Minimalism.png";
+import logoImg from "/Chariz Interiors 1.png";
 import { Link, NavLink } from "react-router-dom";
 import { Grid } from "@mui/material";
 

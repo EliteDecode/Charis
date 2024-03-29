@@ -1,9 +1,9 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
-import image1 from "/public/expect1.png";
-import image2 from "/public/expect2.png";
-import image3 from "/public/expect3.png";
-import image4 from "/public/expect4.png";
+import image1 from "/expect1.png";
+import image2 from "/expect2.png";
+import image3 from "/expect3.png";
+import image4 from "/expect4.png";
 
 const ConsultationExpections = () => {
   return (

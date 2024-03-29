@@ -9,13 +9,17 @@ import ContactSection from "../ui/ContactSection.jsx";
 import ServiceBanner from "../ui/ServiceBanner.jsx";
 import { AboutUsContentCard } from "../ui/About/AboutUsContentCard.jsx";
 import StepsOfUse from "../ui/StepsOfService.jsx";
+import { useEffect } from "react";
 
 // Images
 
 function Services() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="">
-      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[9.5rem] ">
+      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[0.2rem] ">
         {/* Start a Project section */}
         <ServiceBanner />
 

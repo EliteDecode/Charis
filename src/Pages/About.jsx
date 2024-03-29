@@ -8,13 +8,17 @@ import { AboutUsContentCard } from "../ui/About/AboutUsContentCard.jsx";
 
 import OurTeam from "../ui/OurTeam.jsx";
 import AboutUsExperience from "../ui/About/AboutUsExperience.jsx";
+import { useEffect } from "react";
 
 // Images
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="">
-      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[9.5rem]">
+      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[0.2rem]">
         {/* The Art of Beautiful Living section */}
         <AboutUSBanner />
 

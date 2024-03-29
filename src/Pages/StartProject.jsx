@@ -15,13 +15,17 @@ import InteriorCategories from "../ui/InteriorCategories.jsx";
 import ProjectBanner from "../ui/Projects/ProjectsBanner.jsx";
 import ProjectsSlide from "../ui/Projects/ProjectsSlide.jsx";
 import StartProjectBanner from "../ui/Projects/StartProjectBanner.jsx";
+import { useEffect } from "react";
 
 // Images
 
 function StartProject() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="">
-      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[9.5rem] ">
+      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[0.2rem] ">
         {/* Start a Project section */}
         <StartProjectBanner />
 

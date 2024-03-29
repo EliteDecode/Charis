@@ -1,10 +1,10 @@
 import { CiHeart } from "react-icons/ci";
 
-import VintageLampImage1 from "/public/bedroom-interior-2023-11-27-04-57-57-utc 1.png";
-import VintageLampImage2 from "/public/bedroom-interior-2023-11-27-04-57-57-utc 1 (1).png";
-import VintageLampImage3 from "/public/bedroom-interior-2023-11-27-04-57-57-utc 1 (2).png";
-import VintageLampImage4 from "/public/bedroom-interior-2023-11-27-04-57-57-utc 1 (3).png";
-import Group4_1Image from "/public/Group 4 (1).png";
+import VintageLampImage1 from "/bedroom-interior-2023-11-27-04-57-57-utc 1.png";
+import VintageLampImage2 from "/bedroom-interior-2023-11-27-04-57-57-utc 1 (1).png";
+import VintageLampImage3 from "/bedroom-interior-2023-11-27-04-57-57-utc 1 (2).png";
+import VintageLampImage4 from "/bedroom-interior-2023-11-27-04-57-57-utc 1 (3).png";
+import Group4_1Image from "/Group 4 (1).png";
 import { Grid } from "@mui/material";
 
 function ShopInteriorAccessories() {

@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import groupImage from "/public/Group 4 (1).png";
+import groupImage from "/Group 4 (1).png";
 
 function ContactForm() {
   return (

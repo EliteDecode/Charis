@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import Slider from "/public/slider.jpeg";
-import Slider2 from "/public/slider2.png";
-import Slider4 from "/public/slider4.png";
+import Slider from "/slider.jpeg";
+import Slider2 from "/slider2.png";
+import Slider4 from "/slider4.png";
 
 const InteriordDesignSlides = () => {
   return (

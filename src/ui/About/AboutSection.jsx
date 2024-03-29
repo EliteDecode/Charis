@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import RoomDecorImage from "/public/3d-room-decor-with-furniture-minimalist-beige-tones (2) 2.png";
+import RoomDecorImage from "/3d-room-decor-with-furniture-minimalist-beige-tones (2) 2.png";
 
 function AboutSection() {
   const items = [

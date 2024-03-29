@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import statisticsSectionImg from "/public/dining-room-in-a-coffee-shop-2023-11-27-05-05-18-utc 1.png";
+import statisticsSectionImg from "/dining-room-in-a-coffee-shop-2023-11-27-05-05-18-utc 1.png";
 
 function StatisticsSection() {
   return (

@@ -10,13 +10,17 @@ import ProjectGalleryHome from "../ui/ProjectGalleryHome.jsx";
 import TheArtOfBeautifulLiving from "../ui/TheArtOfBeautifulLiving.jsx";
 import ServicesSection from "../ui/ServicesSection.jsx";
 import AboutSection from "../ui/About/AboutSection.jsx";
+import { useEffect } from "react";
 
 // Images
 
 function Homepage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="">
-      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[9.5rem]">
+      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[0.2rem]">
         {/* The Art of Beautiful Living section */}
         <TheArtOfBeautifulLiving />
 

@@ -1,9 +1,9 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import image1 from "/public/hire1.jpeg";
-import image2 from "/public/hire2.jpeg";
-import image3 from "/public/expect3.png";
-import image4 from "/public/expect4.png";
+import image1 from "/hire1.jpeg";
+import image2 from "/hire2.jpeg";
+import image3 from "/expect3.png";
+import image4 from "/expect4.png";
 
 const HireOurTeam = () => {
   return (

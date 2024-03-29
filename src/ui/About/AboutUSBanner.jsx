@@ -1,11 +1,11 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import Slider from "/public/slider.jpeg";
-import Slider2 from "/public/slider2.png";
-import Slider3 from "/public/slider3.png";
-import Slider4 from "/public/slider4.png";
-import Group4Image from "/public/Group 4.png";
+import Slider from "/slider.jpeg";
+import Slider2 from "/slider2.png";
+import Slider3 from "/slider3.png";
+import Slider4 from "/slider4.png";
+import Group4Image from "/Group 4.png";
 
 const AboutUSBanner = () => {
   return (

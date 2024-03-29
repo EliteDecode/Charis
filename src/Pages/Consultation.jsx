@@ -13,13 +13,17 @@ import ConsultationBanner from "../ui/ConsultationBanner.jsx";
 import ConsultationExpections from "../ui/ConsultationExpections.jsx";
 import BookConsultationIntro from "../ui/BookConsultationIntro.jsx";
 import HireOurTeam from "../ui/HireOurTeam.jsx";
+import { useEffect } from "react";
 
 // Images
 
 function Consultation() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="">
-      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[9.5rem] ">
+      <div className=" w-full border overflow-hidden bg-[#F2F2F2] mt-[0.2rem] ">
         {/* Banner */}
         <ConsultationBanner />
 

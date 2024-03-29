@@ -1,6 +1,6 @@
 import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import { BsFacebook } from "react-icons/bs";
-import VectorImage from "/public/Vector (1).png";
+import VectorImage from "/Vector (1).png";
 import { Grid } from "@mui/material";
 
 function ContactSection() {

@@ -1,19 +1,18 @@
-import icon1 from "../../public/ear-rings-01.png";
-import icon2 from "../../public/time-03.png";
-import icon3 from "../../public/pot-01.png";
-import icon4 from "../../public/chair-barber.png";
-import icon5 from "../../public/idea-01.png";
-import icon6 from "../../public/toy-train.png";
-import icon7 from "../../public/favourite.png";
-import icon8 from "../../public/shopping-cart-01.png";
-import imageBackground from "../../public/istockphoto-1191817260-612x612 1.png";
+import icon1 from "/ear-rings-01.png";
+import icon2 from "/time-03.png";
+import icon3 from "/pot-01.png";
+import icon4 from "/chair-barber.png";
+import icon5 from "/idea-01.png";
+import icon6 from "/toy-train.png";
+import icon7 from "/favourite.png";
+import icon8 from "/shopping-cart-01.png";
+import imageBackground from "/istockphoto-1191817260-612x612 1.png";
 
 function ShopHeader() {
   return (
     <div
       className="relative "
-      style={{ marginLeft: "-80px", marginRight: "-80px" }}
-    >
+      style={{ marginLeft: "-80px", marginRight: "-80px" }}>
       <img src={imageBackground} alt="" />
       <div className="absolute flex flex-col gap-10 items-center justify-center bg-white bg-opacity-70 inset-0">
         <h1 className="text-[64px] leading-[71.42px]">Shop</h1>

@@ -1,9 +1,13 @@
-import backgroundImage from "/public/istockphoto-1191817260-612x612 1.png";
+import { useEffect } from "react";
+import backgroundImage from "/istockphoto-1191817260-612x612 1.png";
 
 function Account() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="flex justify-center">
-      <div className="max-w-[1512px] w-full mt-[9.5rem]">
+      <div className="max-w-[1512px] w-full mt-[0.2rem]">
         <div className="w-full">
           <img className="" src={backgroundImage} alt="" />
           <div className="flex  bg-red-900 px-20">

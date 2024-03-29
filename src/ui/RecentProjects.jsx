@@ -5,7 +5,7 @@ import ProjectImage3 from "/cb0c4888461127 (2).png";
 import Pagination from "./Pagination";
 import Carousel from "react-multi-carousel";
 
-import groupIcon from "/public/Group 4 (1).png";
+import groupIcon from "/Group 4 (1).png";
 import { responsiveCarousel } from "../utils";
 
 function RecentProjects() {

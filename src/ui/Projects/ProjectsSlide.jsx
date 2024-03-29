@@ -5,8 +5,9 @@ import ProjectImage3 from "/cb0c4888461127 (2).png";
 
 import Carousel from "react-multi-carousel";
 
-import groupIcon from "/public/Group 4 (1).png";
+import groupIcon from "/Group 4 (1).png";
 import { responsiveCarousel, responsiveCarousel2 } from "../../utils";
+import { Link } from "react-router-dom";
 
 const ProjectsSlide = () => {
   return (
@@ -30,70 +31,78 @@ const ProjectsSlide = () => {
           removeArrowOnDeviceType={["tablet", "mobile"]}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px">
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage1} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          <Link to="/interior">
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage1} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage2} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          </Link>
+          <Link to="/interior">
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage2} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage3} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          </Link>
+          <Link to="/interior">
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage3} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage3} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          </Link>
+          <Link to="/interior">
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage3} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         </Carousel>
       </div>
       <div className="custom-container ">
@@ -114,70 +123,78 @@ const ProjectsSlide = () => {
           removeArrowOnDeviceType={["tablet", "mobile"]}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px">
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage1} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          <Link to="/projects/5">
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage1} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage2} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          </Link>
+          <Link to="/projects/5">
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage2} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage3} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          </Link>
+          <Link>
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage3} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage3} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          </Link>
+          <Link>
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage3} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         </Carousel>
       </div>
       <div className="custom-container ">
@@ -198,70 +215,78 @@ const ProjectsSlide = () => {
           removeArrowOnDeviceType={["tablet", "mobile"]}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px">
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage1} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          <Link to="/projects/5">
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage1} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage2} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          </Link>
+          <Link to="/projects/5">
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage2} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage3} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          </Link>
+          <Link to="/projects/5">
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage3} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-[90%] m-auto ">
-            <img src={ProjectImage3} alt="" />
-            <div className="flex items-center mt-3 justify-between mb-10">
-              <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
-              <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
-                <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                  View Project
-                </p>
-                <img
-                  src={groupIcon}
-                  alt=""
-                  className="cursor-pointer sm:w-[25%] w-[20%]"
-                />
+          </Link>
+          <Link to="/projects/5">
+            <div className="w-[90%] m-auto ">
+              <img src={ProjectImage3} alt="" />
+              <div className="flex items-center mt-3 justify-between mb-10">
+                <h1 className="sm:text-[16px] text-[12px] ">Bon Hotels</h1>
+                <div className="flex items-center sm:gap-6 gap-1 cursor-pointer">
+                  <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                    View Project
+                  </p>
+                  <img
+                    src={groupIcon}
+                    alt=""
+                    className="cursor-pointer sm:w-[25%] w-[20%]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         </Carousel>
       </div>
     </div>

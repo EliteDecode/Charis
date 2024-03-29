@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
-import LogoImg from "/public/Chariz Interiors 1 (1).png";
+import LogoImg from "/Chariz Interiors 1 (1).png";
 
 function Search({ isOpen, setIsOpen }) {
   function handleClick() {
@@ -25,9 +25,8 @@ function Search({ isOpen, setIsOpen }) {
       transition={{ type: "spring", stiffness: 300 }} // Animation transition
       className={`fixed top-0 left-0 w-full bg-black h-[100px] z-50 ${
         isOpen ? "block" : "hidden"
-      }`}
-    >
-      <div className="h-[601px] w-full bg-black text-white px-20 ">
+      }`}>
+      <div className="h-[601px] w-full bg-black text-white sm:px-20 px-2 ">
         <div className="flex items-center justify-between">
           <img src={LogoImg} alt="" />
           <IoClose onClick={handleClick} size={50} />
@@ -35,7 +34,7 @@ function Search({ isOpen, setIsOpen }) {
         <div className="mt-24 px-5">
           <form className="flex flex-row items-center justify-between ">
             <input
-              className="w-[1300px] h-14 bg-black text-[40px]  placeholder:text-[40px] focus:outline-none"
+              className=" h-14 bg-black text-[40px]  placeholder:text-[40px] focus:outline-none"
               type="text"
               placeholder="Type your search words"
             />

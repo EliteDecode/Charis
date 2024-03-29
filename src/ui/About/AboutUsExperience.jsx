@@ -1,5 +1,5 @@
 import React from "react";
-import expImg from "/public/abt_exp.png";
+import expImg from "/abt_exp.png";
 
 const AboutUsExperience = () => {
   return (

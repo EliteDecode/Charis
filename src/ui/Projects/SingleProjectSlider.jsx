@@ -1,11 +1,11 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import Slider from "/public/slider.jpeg";
-import Slider2 from "/public/slider2.png";
-import Slider3 from "/public/slider3.png";
-import Slider4 from "/public/slider4.png";
-import back from "/public/ellipse.png";
-import forward from "/public/ellipseForward.png";
+import Slider from "/slider.jpeg";
+import Slider2 from "/slider2.png";
+import Slider3 from "/slider3.png";
+import Slider4 from "/slider4.png";
+import back from "/ellipse.png";
+import forward from "/ellipseForward.png";
 import { Box, Grid } from "@mui/material";
 
 const SingleProjectSlider = () => {

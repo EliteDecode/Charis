@@ -10,6 +10,11 @@ const ProjectBanner = () => {
             Projects
           </h1>{" "}
           <p className="text-[#fff]">Home / Projects</p>
+          <a href="start-projects">
+            <button className="px-4 py-2 rounded-md mt-5 border-[#FFC50A] border text-white">
+              Start a Project
+            </button>
+          </a>
         </div>
       </div>
     </>

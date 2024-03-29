@@ -4,10 +4,10 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import LivingRoomImage from "/public/photo1.png";
-import KitchenImage from "/public/photo4.png";
-import RoomImage from "/public/photo2.png";
-import OfficeImage from "/public/photo3.png";
+import LivingRoomImage from "/photo1.png";
+import KitchenImage from "/photo4.png";
+import RoomImage from "/photo2.png";
+import OfficeImage from "/photo3.png";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
