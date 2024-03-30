@@ -38,28 +38,29 @@ function Nav({ setIsOpen }) {
     }
   };
   return (
-    <div className="sticky top-0   bg-white z-50" onClick={closeMenus}>
+    <div className="sticky top-0 z-50 bg-white" onClick={closeMenus}>
       <div className="relative">
-        <nav className="flex items-center justify-between py-4 w-full sm:px-20 px-2 ">
+        <nav className="flex items-center justify-between w-full px-2 py-4 sm:px-20 ">
           <a href="/" className="sm:w-[15%] w-[40%]">
             <img className="cursor-pointer " src={logoImg} alt="Logo" />
           </a>
           <div className="flex items-center gap-24">
-            <ul className="items-center gap-16 mb-5 md:flex hidden">
+            <ul className="items-center hidden gap-16 mb-5 md:flex">
               <NavLink to="home">
                 <li className="hover:text-[#FFC50A] cursor-pointer">Home</li>
               </NavLink>
               <div className="relative">
                 <li
                   className="flex items-center justify-center gap-2 hover:text-[#FFC50A] cursor-pointer"
-                  onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}>
+                  onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
+                >
                   <span>Pages</span>{" "}
                   <span className="mt-1">
                     <FaAngleDown size={20} />
                   </span>{" "}
                 </li>
                 {isNavDropdownOpen && (
-                  <div className="bg-gray-100 absolute top-5 p-5 my-3">
+                  <div className="absolute p-5 my-3 bg-gray-100 top-5">
                     <NavLink to="services">
                       <li className="hover:text-[#FFC50A] cursor-pointer mb-5 text-[14px]">
                         Services
@@ -98,7 +99,9 @@ function Nav({ setIsOpen }) {
             </ul>
 
             <div className="flex items-center gap-4 mb-5">
-              <img className="cursor-pointer" src={userImg} alt="User" />
+              <NavLink to="account">
+                <img className="cursor-pointer" src={userImg} alt="User" />
+              </NavLink>
               <img src={lineImg} alt="Line" />
               <img
                 className="cursor-pointer"
@@ -106,10 +109,10 @@ function Nav({ setIsOpen }) {
                 alt="Search"
                 onClick={handleClick}
               />
-              <img src={lineImg} alt="Line" className="md:hidden block" />
+              <img src={lineImg} alt="Line" className="block md:hidden" />
               <MdMenu
                 size={35}
-                className="md:hidden block"
+                className="block md:hidden"
                 onClick={() => setIsSidebar(!isSidebar)}
               />
             </div>
@@ -120,8 +123,9 @@ function Nav({ setIsOpen }) {
         <div
           className={`absolute top-0 bg-white w-full h-screen p-5 transition-transform ${
             isSidebar ? "translate-x-0" : "-translate-x-full"
-          }`}>
-          <div className="flex justify-between items-center">
+          }`}
+        >
+          <div className="flex items-center justify-between">
             <img
               className="cursor-pointer sm:w-[15%] w-[40%]"
               src={logoImg}
@@ -147,7 +151,7 @@ function Nav({ setIsOpen }) {
               </span>{" "}
             </li>
             {isDropdownOpen && (
-              <div className="bg-gray-100 p-5 my-3">
+              <div className="p-5 my-3 bg-gray-100">
                 <NavLink to="services" onClick={() => setIsSidebar(false)}>
                   <li className="hover:text-[#FFC50A] cursor-pointer mb-5 text-[14px]">
                     Services

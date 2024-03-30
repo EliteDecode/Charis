@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const BillingDetails = () => {
   return (
-    <div className="nt-12 py-16">
+    <div className="py-16 mt-12">
       <Box className="sm:w-[80%] w-[95%] m-auto ">
         <Box>
           <Grid container spacing={4}>
@@ -26,7 +26,8 @@ const BillingDetails = () => {
               xs={12}
               sm={12}
               md={5}
-              style={{ position: "sticky", top: "150px" }}>
+              style={{ position: "sticky", top: "150px" }}
+            >
               <Box className="border p-3 rounded-md bg-[#F2F2F2] relative shadow-md py-3">
                 <p className="my-3">Your Order</p>
 

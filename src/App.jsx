@@ -1,10 +1,19 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  Outlet,
+} from "react-router-dom";
 import AppLayout from "./helpers/AppLayout";
 import Homepage from "./Pages/Homepage";
 import Gallery from "./Pages/Gallery";
 import Shop from "./Pages/Shop";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
+import Success from "./Pages/Success";
+import Account from "./Pages/Account"; // Import your Account component here
 import "react-multi-carousel/lib/styles.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import About from "./Pages/About";
@@ -14,14 +23,17 @@ import Consultation from "./Pages/Consultation";
 import Projects from "./Pages/Projects";
 import SingleProject from "./Pages/SingleProject";
 import StartProject from "./Pages/StartProject";
-import Signup from "./Pages/Signup";
-import Account from "./Pages/Account";
 import Team from "./Pages/Team";
 import SingleProduct from "./Pages/SingleProduct";
 import Cart from "./Pages/Cart";
 import Billing from "./Pages/Billing";
 import PaymentMethods from "./Pages/PaymentMethods";
-import Success from "./Pages/Success";
+import AccountDeatils from "./Pages/AccountDeatils";
+import Notifications from "./Pages/Notifications";
+import Orders from "./Pages/Orders";
+import Payment from "./Pages/Payment";
+import Settings from "./Pages/Settings";
+
 function App() {
   return (
     <BrowserRouter>
@@ -47,7 +59,14 @@ function App() {
           <Route path="payments" element={<PaymentMethods />} />
           <Route path="shop/:productId" element={<SingleProduct />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="account" element={<Account />} />
+          {/* Define another outlet for the account page */}
+          <Route element={<Account />}>
+            <Route path="account" element={<AccountDeatils />} />
+            <Route path="notifications" element={<Notifications />} />
+            <Route path="orders" element={<Orders />} />
+            <Route path="payment" element={<Payment />} />
+            <Route path="Settings" element={<Settings />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
