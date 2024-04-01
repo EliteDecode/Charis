@@ -3,6 +3,8 @@ import VintageLampImage2 from "/bedroom-interior-2023-11-27-04-57-57-utc 1 (1).p
 import VintageLampImage3 from "/bedroom-interior-2023-11-27-04-57-57-utc 1 (2).png";
 import VintageLampImage4 from "/bedroom-interior-2023-11-27-04-57-57-utc 1 (3).png";
 
+import OrderImage from "/public/Pottery 1.png";
+
 export const responsiveCarousel = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -148,5 +150,80 @@ export const products = [
     price: 79,
     description:
       "Portable external hard drive with high storage capacity and fast data transfer speeds.",
+  },
+];
+
+export const orders = [
+  {
+    name: "Flower Vase",
+    image: OrderImage,
+    orderNo: 23456789345678,
+    status: "Ongoing",
+    expectedDate: "12/01/2024",
+  },
+
+  {
+    name: "Pot Vase",
+    image: OrderImage,
+    orderNo: 23456789334698,
+    status: "Delivered",
+    expectedDate: "12/01/2024",
+  },
+
+  {
+    name: "Flower Vase",
+    image: OrderImage,
+    orderNo: 23456789345678,
+    status: "Ongoing",
+    expectedDate: "12/01/2024",
+  },
+
+  {
+    name: "Pot Vase",
+    image: OrderImage,
+    orderNo: 23456789334698,
+    status: "Delivered",
+    expectedDate: "12/01/2024",
+  },
+
+  {
+    name: "Pot Vase",
+    image: OrderImage,
+    orderNo: 23456789334698,
+    status: "Delivered",
+    expectedDate: "12/01/2024",
+  },
+
+  {
+    name: "Base Vase",
+    image: OrderImage,
+    orderNo: 23456789334698,
+    status: "Canceled",
+    expectedDate: "12/01/2024",
+  },
+
+  {
+    name: "Fit Vase",
+    image: OrderImage,
+    orderNo: 23456789334698,
+    status: "Returned",
+    expectedDate: "12/01/2024",
+  },
+];
+
+export const creditCards = [
+  {
+    name: "Jamie Lannister",
+    cardNumber: 4334720862834901,
+  },
+
+  {
+    name: "weds srart",
+    cardNumber: 2334720862833241,
+  },
+
+  {
+    name: "weds srart",
+    cardNumber: 5334720862838352,
   },
 ];

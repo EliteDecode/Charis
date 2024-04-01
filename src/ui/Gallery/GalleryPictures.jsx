@@ -10,8 +10,8 @@ import Pagination from "../Pagination";
 
 function GalleryPictures() {
   return (
-    <div className="flex items-center flex-col justify-center">
-      <div className="flex items-center flex-col gap-3 mt-12">
+    <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center gap-3 mt-12">
         <div className="flex items-center justify-between gap-16 ">
           <p className="text-[20px] relative pb-2  group cursor-pointer">
             Living room Interior
@@ -34,7 +34,7 @@ function GalleryPictures() {
       </div>
 
       {/* Photos */}
-      <div className="mt-20 flex items-center flex-col gap-5">
+      <div className="flex flex-col items-center gap-5 mt-20">
         <div className="flex gap-5">
           <div className="flex flex-col gap-5">
             <img src={photo1} alt="" />

@@ -1,7 +1,6 @@
 import ContactForm from "../ui/ContactForm";
 import ContactSection from "../ui/ContactSection";
 import ShopBanner from "../ui/Shop/ShopBanner";
-import ShopHeader from "../ui/ShopHeader";
 import ShopImage from "../ui/Shop/ShopImage";
 import { useEffect } from "react";
 

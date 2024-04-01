@@ -1,10 +1,4 @@
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes,
-  Outlet,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import AppLayout from "./helpers/AppLayout";
 import Homepage from "./Pages/Homepage";
 import Gallery from "./Pages/Gallery";
@@ -13,9 +7,7 @@ import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Success from "./Pages/Success";
-import Account from "./Pages/Account"; // Import your Account component here
-import "react-multi-carousel/lib/styles.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Account from "./Pages/Account";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
 import RinteriorDesign from "./Pages/RInteriorDesign";
@@ -63,7 +55,7 @@ function App() {
           <Route element={<Account />}>
             <Route path="account" element={<AccountDeatils />} />
             <Route path="notifications" element={<Notifications />} />
-            <Route path="orders" element={<Orders />} />
+            <Route path="orders/*" element={<Orders />} />
             <Route path="payment" element={<Payment />} />
             <Route path="Settings" element={<Settings />} />
           </Route>

@@ -13,10 +13,11 @@ function AboutSection() {
 
   return (
     <div
-      className="relative  custom-container"
-      style={{ marginTop: 40, marginBottom: 50 }}>
+      className="relative custom-container"
+      style={{ marginTop: 40, marginBottom: 50 }}
+    >
       <Grid container>
-        <Grid item sm={12} md={6} className="z-10 sm:block hidden">
+        <Grid item sm={12} md={6} className="z-10 hidden sm:block">
           <img
             className=" h-[603px] w-full z-10"
             src={RoomDecorImage}
@@ -29,7 +30,8 @@ function AboutSection() {
             <div className="text-center">
               <h1
                 className="sm:text-[126px] text-[80px] text-center sm:-mt-24 mt-0 sm:-ml-24 -ml-0 z-0 text-yellow-400 text-opacity-25  cursor-default"
-                style={{ zIndex: 0 }}>
+                style={{ zIndex: 0 }}
+              >
                 About Us
               </h1>
             </div>
@@ -56,7 +58,8 @@ function AboutSection() {
                       sm={6}
                       xs={6}
                       key={index}
-                      className="flex items-center border gap-2 border-[#FFC50A] py-2 px-1 cursor-pointer">
+                      className="flex items-center border gap-2 border-[#FFC50A] py-2 px-1 cursor-pointer"
+                    >
                       <img src={item.image} alt="" />
                       <p>{item.text}</p>
                     </Grid>

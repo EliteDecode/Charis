@@ -3,11 +3,11 @@ import TabsGallery from "../../helpers/TabsGallary";
 
 function GalleryHeader() {
   return (
-    <div className="sm:py-5 py-5  custom-container">
+    <div className="py-5 sm:py-5 custom-container">
       <h1 className=" text-center sm:text-[200px] text-[80px] text-[#FFC50A1A] cursor-default">
         GALLERY
       </h1>
-      <div className="text-center sm:-mt-36 -mt-16">
+      <div className="-mt-16 text-center sm:-mt-36">
         <h1 className="sm:text-[54px] text-[36px] font-bold text-[#000]">
           Gallery
         </h1>
@@ -20,7 +20,7 @@ function GalleryHeader() {
       <div className="mt-5">
         <TabsGallery />
       </div>
-      <div className="flex items-center justify-center gap-6 cursor-pointer mt-5">
+      <div className="flex items-center justify-center gap-6 mt-5 cursor-pointer">
         <p className="text-black text-[18px] font-normal">View More</p>
         <img src={ViewMoreImage} alt="" className="cursor-pointer" />
       </div>

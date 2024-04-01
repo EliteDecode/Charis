@@ -8,7 +8,6 @@ import SettingsIcon from "../../public/settings-01.png";
 import LogoutIcon from "../../public/logout-03.png";
 import { NavLink, Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom/dist";
-import { MenuItem } from "@mui/material";
 
 function Account() {
   const location = useLocation();
@@ -44,14 +43,12 @@ function Account() {
             <img className="w-full h-auto" src={backgroundImage} alt="" />
             <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50">
               <h1 className="p-4 text-2xl font-bold text-white rounded-lg sm:text-4xl md:text-6xl">
-                {menuItems.map((item) =>
-                  url === item.NavLink ? item.label : ""
-                )}
+                {menuItems.find((item) => item.NavLink === currentUrl)?.label}
               </h1>
             </div>
           </div>
           <div className="flex bg-[#D9D9D9] md:px-20 px-1 relative">
-            <div className="z-10 max-h-full bg-[#D9D9D9] mt-5 md:flex hidden">
+            <div className="z-10 max-h-full bg-[#D9D9D9] mt-5 lg:flex hidden">
               <ul className="flex flex-col  w-full min-w-[250px]">
                 {menuItems.map((item, index) => (
                   <NavLink
@@ -73,7 +70,7 @@ function Account() {
                 ))}
               </ul>
             </div>
-            <div className="z-10 max-h-full bg-[#D9D9D9] mt-5 md:hidden flex">
+            <div className="z-10 max-h-full bg-[#D9D9D9] mt-5 lg:hidden flex">
               <ul className="flex flex-col  w-full min-w-[40px]">
                 {menuItems.map((item, index) => (
                   <NavLink
@@ -94,7 +91,7 @@ function Account() {
                 ))}
               </ul>
             </div>
-            <div className="bg-white border border-[#FFC50A] max-w-[1122px] w-full h-[500px] md:-mt-16 mt-1 overflow-scroll">
+            <div className="bg-white border border-[#FFC50A] max-w-[1122px] w-full h-[500px] md:-mt-16 mt-1 overflow-scroll custom-scrollbar">
               <Outlet />
             </div>
           </div>
