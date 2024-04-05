@@ -47,39 +47,36 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="success" element={<Success />} />
-        <Route element={<AppLayout />}>
-          <Route
-            index
-            element={
-              <Navigate replace to={firstLaunch == true ? "welcome" : "home"} />
-            }
-          />
-          <Route path="home" element={<Homepage />} />
-          <Route path="welcome" element={<Welcome />} />
-          <Route path="about" element={<About />} />
-          <Route path="interior" element={<RinteriorDesign />} />
-          <Route path="consultation" element={<Consultation />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="projects/:projectId" element={<SingleProject />} />
-          <Route path="start-projects" element={<StartProject />} />
-          <Route path="team" element={<Team />} />
-          <Route path="services" element={<Services />} />
-          <Route path="gallery" element={<Gallery />} />
-          <Route path="shop" element={<Shop />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="billing" element={<Billing />} />
-          <Route path="payments" element={<PaymentMethods />} />
-          <Route path="shop/:productId" element={<SingleProduct />} />
-          <Route path="contact" element={<Contact />} />
-          {/* Define another outlet for the account page */}
-          <Route element={<Account />}>
-            <Route path="account" element={<AccountDeatils />} />
-            <Route path="notifications" element={<Notifications />} />
-            <Route path="orders/*" element={<Orders />} />
-            <Route path="payment" element={<Payment />} />
-            <Route path="Settings" element={<Settings />} />
+        {firstLaunch && <Route path="welcome" element={<Welcome />} />}
+        {!firstLaunch && (
+          <Route element={<AppLayout />}>
+            <Route index element={<Navigate replace to="home" />} />
+            <Route path="home" element={<Homepage />} />
+            <Route path="about" element={<About />} />
+            <Route path="interior" element={<RinteriorDesign />} />
+            <Route path="consultation" element={<Consultation />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="projects/:projectId" element={<SingleProject />} />
+            <Route path="start-projects" element={<StartProject />} />
+            <Route path="team" element={<Team />} />
+            <Route path="services" element={<Services />} />
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="shop" element={<Shop />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="billing" element={<Billing />} />
+            <Route path="payments" element={<PaymentMethods />} />
+            <Route path="shop/:productId" element={<SingleProduct />} />
+            <Route path="contact" element={<Contact />} />
+            {/* Define another outlet for the account page */}
+            <Route element={<Account />}>
+              <Route path="account" element={<AccountDeatils />} />
+              <Route path="notifications" element={<Notifications />} />
+              <Route path="orders/*" element={<Orders />} />
+              <Route path="payment" element={<Payment />} />
+              <Route path="Settings" element={<Settings />} />
+            </Route>
           </Route>
-        </Route>
+        )}
       </Routes>
     </BrowserRouter>
   );

@@ -10,7 +10,7 @@ const Welcome = () => {
     localStorage.setItem("FirstTime", JSON.stringify("False"));
   };
   return (
-    <Box className="flex flex-col justify-center items-center space-y-8">
+    <Box className="flex h-screen flex-col justify-center items-center space-y-8">
       <Box className="mt-5 flex flex-col justify-center items-center space-y-8  ">
         <h1 className="font-bold text-[40px]">Welcome to Chariz</h1>
 
