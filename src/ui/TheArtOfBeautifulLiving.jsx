@@ -23,11 +23,15 @@ function TheArtOfBeautifulLiving() {
                     style={{ fontFamily: "rofane" }}>
                     The Art of Beautiful Living
                   </h1>
-                  <div className="flex items-center gap-16 mt-8">
-                    <p className="text-[#FFFFFF] text-[18px] font-normal">
+                  <div className="flex items-center gap-16 mt-8 mb-5">
+                    <p className="text-[#FFFFFF] text-[15px] font-normal">
                       Book Consultation
                     </p>
-                    <img src={Group4Image} alt="" c />
+                    <img
+                      src={Group4Image}
+                      alt=""
+                      className="sm:w-[4%] w-[15%]"
+                    />
                   </div>
                 </div>
               </div>
@@ -49,7 +53,7 @@ function TheArtOfBeautifulLiving() {
                     <p className="text-black text-[18px] font-normal">
                       View Recent Projects
                     </p>
-                    <img src={Group4_1Image} alt="" />
+                    <img src={Group4_1Image} alt="" className="sm:w-[15%]" />
                   </div>
                 </div>
               </div>

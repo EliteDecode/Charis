@@ -25,8 +25,22 @@ import Notifications from "./Pages/Notifications";
 import Orders from "./Pages/Orders";
 import Payment from "./Pages/Payment";
 import Settings from "./Pages/Settings";
+import Welcome from "./Pages/Welcome";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 function App() {
+  const [firstLaunch, setFirstLaunch] = useState(true);
+  const checkFirstLaunch = () => {
+    const check = JSON.parse(localStorage.getItem("FirstTime"));
+    if (check) {
+      setFirstLaunch(false);
+    }
+  };
+  useLayoutEffect(() => {
+    checkFirstLaunch();
+  }, []);
+
+  console.log(firstLaunch);
   return (
     <BrowserRouter>
       <Routes>
@@ -34,8 +48,14 @@ function App() {
         <Route path="signup" element={<Signup />} />
         <Route path="success" element={<Success />} />
         <Route element={<AppLayout />}>
-          <Route index element={<Navigate replace to="home" />} />
+          <Route
+            index
+            element={
+              <Navigate replace to={firstLaunch == true ? "welcome" : "home"} />
+            }
+          />
           <Route path="home" element={<Homepage />} />
+          <Route path="welcome" element={<Welcome />} />
           <Route path="about" element={<About />} />
           <Route path="interior" element={<RinteriorDesign />} />
           <Route path="consultation" element={<Consultation />} />

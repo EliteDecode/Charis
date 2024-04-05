@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"; // Import PropTypes from prop-types package
 import { FaAngleDown, FaHamburger } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import logoImg from "/Chariz Interiors 1.png";
 import userImg from "/user.png";
 import lineImg from "/Line 4.png";
@@ -37,23 +37,29 @@ function Nav({ setIsOpen }) {
       setIsNavDropdownOpen(false);
     }
   };
+
+  const location = useLocation();
   return (
     <div className="sticky top-0 z-50 bg-white" onClick={closeMenus}>
       <div className="relative">
         <nav className="flex items-center justify-between w-full px-2 py-4 sm:px-20 ">
-          <a href="/" className="sm:w-[15%] w-[40%]">
+          <a href="/" className="sm:w-[10%] w-[40%]">
             <img className="cursor-pointer " src={logoImg} alt="Logo" />
           </a>
           <div className="flex items-center gap-24">
             <ul className="items-center hidden gap-16 mb-5 md:flex">
               <NavLink to="home">
-                <li className="hover:text-[#FFC50A] cursor-pointer">Home</li>
+                <li
+                  className={`hover:text-[#FFC50A] cursor-pointer ${
+                    location.pathname.includes("home") ? "text-[#FFC50A]" : ""
+                  }`}>
+                  Home
+                </li>
               </NavLink>
               <div className="relative">
                 <li
                   className="flex items-center justify-center gap-2 hover:text-[#FFC50A] cursor-pointer"
-                  onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
-                >
+                  onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}>
                   <span>Pages</span>{" "}
                   <span className="mt-1">
                     <FaAngleDown size={20} />
@@ -85,13 +91,33 @@ function Nav({ setIsOpen }) {
                 )}
               </div>
               <NavLink to="gallery">
-                <li className="hover:text-[#FFC50A] cursor-pointer">Gallery</li>
+                <li
+                  className={`hover:text-[#FFC50A] cursor-pointer ${
+                    location.pathname.includes("gallery")
+                      ? "text-[#FFC50A]"
+                      : ""
+                  }`}>
+                  {" "}
+                  Gallery
+                </li>
               </NavLink>
               <NavLink to="shop">
-                <li className="hover:text-[#FFC50A] cursor-pointer">Shop</li>
+                <li
+                  className={`hover:text-[#FFC50A] cursor-pointer ${
+                    location.pathname.includes("shop") ? "text-[#FFC50A]" : ""
+                  }`}>
+                  Shop
+                </li>
               </NavLink>
               <NavLink to="contact">
-                <li className="hover:text-[#FFC50A] cursor-pointer">Contact</li>
+                <li
+                  className={`hover:text-[#FFC50A] cursor-pointer ${
+                    location.pathname.includes("contact")
+                      ? "text-[#FFC50A]"
+                      : ""
+                  }`}>
+                  Contact
+                </li>
               </NavLink>
               <NavLink to="login">
                 <li className="hover:text-[#FFC50A] cursor-pointer">Login</li>
@@ -123,8 +149,7 @@ function Nav({ setIsOpen }) {
         <div
           className={`absolute top-0 bg-white w-full h-screen p-5 transition-transform ${
             isSidebar ? "translate-x-0" : "-translate-x-full"
-          }`}
-        >
+          }`}>
           <div className="flex items-center justify-between">
             <img
               className="cursor-pointer sm:w-[15%] w-[40%]"
