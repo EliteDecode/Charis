@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Welcome = () => {
   const navigate = useNavigate();
   const handleNext = () => {
-    navigate("/home");
+    navigate("/");
     localStorage.setItem("FirstTime", JSON.stringify("False"));
   };
   return (
@@ -16,7 +16,7 @@ const Welcome = () => {
 
         <img src={door} alt="" className="sm:w-[54%] w-[70%]" />
 
-        <a href="/home">
+        <a href="/">
           <h1
             className="font-bold text-[40px] cursor-pointer"
             onClick={handleNext}>
