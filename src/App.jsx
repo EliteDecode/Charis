@@ -47,7 +47,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="success" element={<Success />} />
-        {firstLaunch && <Route path="welcome" element={<Welcome />} />}
+        {firstLaunch && <Route path="/" element={<Welcome />} />}
         {!firstLaunch && (
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="home" />} />

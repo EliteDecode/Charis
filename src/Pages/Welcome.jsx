@@ -16,11 +16,13 @@ const Welcome = () => {
 
         <img src={door} alt="" className="sm:w-[54%] w-[70%]" />
 
-        <h1
-          className="font-bold text-[40px] cursor-pointer"
-          onClick={handleNext}>
-          Enter
-        </h1>
+        <a href="/home">
+          <h1
+            className="font-bold text-[40px] cursor-pointer"
+            onClick={handleNext}>
+            Enter
+          </h1>
+        </a>
       </Box>
     </Box>
   );
