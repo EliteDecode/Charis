@@ -4,11 +4,11 @@ import { Carousel } from "react-responsive-carousel";
 
 function PosterComponent() {
   return (
-    <div className="  custom-container">
+    <div className="">
       <Carousel>
-        <div className="poster sm:py-20 py-20">
+        <div className="poster sm:py-48 py-20">
           <div className=" flex flex-col items-center justify-center ">
-            <p className="text-center sm:text-[15px] text-[13px] text-gray-300 sm:w-[60%] w-[95%] m-auto">
+            <p className="text-center sm:text-[19px] text-[13px] text-gray-300 sm:w-[60%] w-[95%] m-auto">
               At La Chariz Interiors, we are dedicated to creating remarkable
               spaces that elevate living and working experiences. Whether it's
               revamping a single room or designing an entire property, we are
@@ -28,9 +28,9 @@ function PosterComponent() {
             </div>
           </div>
         </div>
-        <div className="poster sm:py-20 py-20">
+        <div className="poster sm:py-48 py-20">
           <div className=" flex flex-col items-center justify-center ">
-            <p className="text-center sm:text-[15px] text-[13px] text-gray-300 sm:w-[60%] w-[95%] m-auto">
+            <p className="text-center sm:text-[19px] text-[13px] text-gray-300 sm:w-[60%] w-[95%] m-auto">
               At La Chariz Interiors, we are dedicated to creating remarkable
               spaces that elevate living and working experiences. Whether it's
               revamping a single room or designing an entire property, we are
@@ -50,9 +50,9 @@ function PosterComponent() {
             </div>
           </div>
         </div>
-        <div className="poster sm:py-20 py-20">
+        <div className="poster sm:py-48 py-20">
           <div className=" flex flex-col items-center justify-center ">
-            <p className="text-center sm:text-[15px] text-[13px] text-gray-300 sm:w-[60%] w-[95%] m-auto">
+            <p className="text-center sm:text-[19px] text-[13px] text-gray-300 sm:w-[60%] w-[95%] m-auto">
               At La Chariz Interiors, we are dedicated to creating remarkable
               spaces that elevate living and working experiences. Whether it's
               revamping a single room or designing an entire property, we are
@@ -72,9 +72,9 @@ function PosterComponent() {
             </div>
           </div>
         </div>
-        <div className="poster sm:py-20 py-20">
+        <div className="poster sm:py-48 py-20">
           <div className=" flex flex-col items-center justify-center ">
-            <p className="text-center sm:text-[15px] text-[13px] text-gray-300 sm:w-[60%] w-[95%] m-auto">
+            <p className="text-center sm:text-[19px] text-[13px] text-gray-300 sm:w-[60%] w-[95%] m-auto">
               At La Chariz Interiors, we are dedicated to creating remarkable
               spaces that elevate living and working experiences. Whether it's
               revamping a single room or designing an entire property, we are

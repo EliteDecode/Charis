@@ -41,7 +41,7 @@ function a11yProps(index) {
   };
 }
 
-export default function SingleProductReview() {
+export default function SingleProductReview({ singleProduct }) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -77,18 +77,14 @@ export default function SingleProductReview() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <p>
-          Chariz Interiors is a full-service design firm providing architecture,
-          master planning, urban design, interior architecture, space planning
-          and programming.
-        </p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: singleProduct?.data?.description,
+          }}
+        />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <p>
-          Chariz Interiors is a full-service design firm providing architecture,
-          master planning, urban design, interior architecture, space planning
-          and programming.
-        </p>
+        <p>{singleProduct?.data?.additional_info}</p>
       </CustomTabPanel>
     </Box>
   );

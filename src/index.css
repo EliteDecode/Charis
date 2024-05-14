@@ -142,7 +142,7 @@ a {
 
 .poster {
   background: url("/public/3d-illustration-mockup-photo-frame-in-living-room-2023-11-27-05-18-18-utc\ 1.png");
-  background-color: #000000c9;
+  background-color: #00000088;
   background-blend-mode: overlay;
   background-size: cover;
   background-attachment: fixed;
@@ -262,14 +262,14 @@ a {
 
 .loginBg {
   background: url("/public/The Simple Serenity of Soft Minimalism 1.png");
-  background-color: #ffffff80;
+  background-color: #ffffff10;
   background-size: cover;
   background-blend-mode: overlay;
 }
 
 .signupbg {
   background: url("/public/signupbg.jpg");
-  background-color: #ffffff95;
+  background-color: #00000050;
   background-size: cover;
   background-blend-mode: overlay;
   background-position: 0px -400px;

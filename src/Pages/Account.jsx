@@ -6,8 +6,10 @@ import OrderIcon from "../../public/shopping-cart-check-01.png";
 import CreditCard from "../../public/credit-card-pos.png";
 import SettingsIcon from "../../public/settings-01.png";
 import LogoutIcon from "../../public/logout-03.png";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom/dist";
+import { useDispatch } from "react-redux";
+import { logout } from "@/features/auth/authSlice";
 
 function Account() {
   const location = useLocation();
@@ -24,16 +26,22 @@ function Account() {
 
   const menuItems = [
     { icon: userIcon, label: "My Account", NavLink: "account" },
-    {
-      icon: notificationIcon,
-      label: "Notifications",
-      NavLink: "notifications",
-    },
+    // {
+    //   icon: notificationIcon,
+    //   label: "Notifications",
+    //   NavLink: "notifications",
+    // },
     { icon: OrderIcon, label: "My Orders", NavLink: "orders" },
-    { icon: CreditCard, label: "Payment Methods", NavLink: "payment" },
-    { icon: SettingsIcon, label: "Settings", NavLink: "settings" },
+    // { icon: CreditCard, label: "Payment Methods", NavLink: "payment" },
+    // { icon: SettingsIcon, label: "Settings", NavLink: "settings" },
     { icon: LogoutIcon, label: "Logout" },
   ];
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    dispatch(logout());
+  };
 
   return (
     <div className="flex justify-center">
@@ -51,22 +59,35 @@ function Account() {
             <div className="z-10 max-h-full bg-[#D9D9D9] mt-5 lg:flex hidden">
               <ul className="flex flex-col  w-full min-w-[250px]">
                 {menuItems.map((item, index) => (
-                  <NavLink
-                    to={`/${
-                      item.NavLink ? item.NavLink.toLowerCase() : "login"
-                    }`}
-                    key={index}
-                  >
-                    <li
-                      className={`w-full max-w-[250px] h-[63px] ${
-                        url === item.NavLink ? "bg-[#FFC50A]" : ""
-                      } flex items-center gap-5 pl-4`}
-                      onClick={() => handlecurrentUrl(item.NavLink)}
-                    >
-                      <img src={item.icon} alt="" />
-                      <span>{item.label}</span>
-                    </li>
-                  </NavLink>
+                  <>
+                    {item.label == "Logout" ? (
+                      <NavLink onClick={handleLogout} key={index}>
+                        <li
+                          className={`w-full max-w-[250px] h-[63px] ${
+                            url === item.NavLink ? "bg-[#FFC50A]" : ""
+                          } flex items-center gap-5 pl-4`}
+                          onClick={() => handlecurrentUrl(item.NavLink)}>
+                          <img src={item.icon} alt="" />
+                          <span>{item.label}</span>
+                        </li>
+                      </NavLink>
+                    ) : (
+                      <NavLink
+                        to={`/${
+                          item.NavLink ? item.NavLink.toLowerCase() : ""
+                        }`}
+                        key={index}>
+                        <li
+                          className={`w-full max-w-[250px] h-[63px] ${
+                            url === item.NavLink ? "bg-[#FFC50A]" : ""
+                          } flex items-center gap-5 pl-4`}
+                          onClick={() => handlecurrentUrl(item.NavLink)}>
+                          <img src={item.icon} alt="" />
+                          <span>{item.label}</span>
+                        </li>
+                      </NavLink>
+                    )}
+                  </>
                 ))}
               </ul>
             </div>
@@ -77,21 +98,19 @@ function Account() {
                     to={`/${
                       item.NavLink ? item.NavLink.toLowerCase() : "login"
                     }`}
-                    key={index}
-                  >
+                    key={index}>
                     <li
                       className={`w-full max-w-[250px] h-[63px] ${
                         url === item.NavLink ? "bg-[#FFC50A]" : ""
                       } flex items-center gap-5 pl-4`}
-                      onClick={() => handlecurrentUrl(item.NavLink)}
-                    >
+                      onClick={() => handlecurrentUrl(item.NavLink)}>
                       <img src={item.icon} alt="" />
                     </li>
                   </NavLink>
                 ))}
               </ul>
             </div>
-            <div className="bg-white border border-[#FFC50A] max-w-[1122px] w-full h-[500px] md:-mt-16 mt-1 overflow-scroll custom-scrollbar">
+            <div className="bg-white border border-[#FFC50A] max-w-[1122px] w-full  md:-mt-16 mt-1 overflow-scroll custom-scrollbar">
               <Outlet />
             </div>
           </div>

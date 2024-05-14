@@ -8,6 +8,7 @@ import LivingRoomImage from "/photo1.png";
 import KitchenImage from "/photo4.png";
 import RoomImage from "/photo2.png";
 import OfficeImage from "/photo3.png";
+import { useSelector } from "react-redux";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -48,6 +49,26 @@ export default function TabsGallery() {
     setValue(newValue);
   };
 
+  const { gallery, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.gallery
+  );
+
+  const livingRoom = gallery?.data?.filter(
+    (item) => item?.gallery_category == "Living Room Interior"
+  );
+
+  const kitchen = gallery?.data?.filter(
+    (item) => item?.gallery_category == "Kitchen Interior"
+  );
+
+  const roomInterior = gallery?.data?.filter(
+    (item) => item?.gallery_category == "Room Interior"
+  );
+
+  const officeInterior = gallery?.data?.filter(
+    (item) => item?.gallery_category == "Office Interior"
+  );
+
   return (
     <Box sx={{ width: "100%" }}>
       <Box
@@ -79,67 +100,55 @@ export default function TabsGallery() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <div className="flex sm:flex-nowrap flex-wrap gap-3 mt-10">
-          <div className="flex sm:flex-nowrap flex-wrap gap-3 flex-col">
-            <div className="flex sm:flex-nowrap flex-wrap gap-3">
-              <img src={LivingRoomImage} alt="" />
-              <img src={KitchenImage} alt="" />
-            </div>
-            <div>
-              <img src={RoomImage} alt="" />
-            </div>
-          </div>
-          <div>
-            <img src={OfficeImage} alt="" />
-          </div>
+        <div className="grid sm:grid-cols-3 grid-cols-1 gap-3 mt-10 py-5">
+          {livingRoom?.map((item) => {
+            return (
+              <img
+                src={item?.image}
+                alt=""
+                className="w-full h-full rounded-md p-3 shadow-md bg-white"
+              />
+            );
+          })}
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <div className="flex sm:flex-nowrap flex-wrap gap-3 mt-10">
-          <div className="flex sm:flex-nowrap flex-wrap gap-3 flex-col">
-            <div className="flex sm:flex-nowrap flex-wrap gap-3">
-              <img src={LivingRoomImage} alt="" />
-              <img src={KitchenImage} alt="" />
-            </div>
-            <div>
-              <img src={RoomImage} alt="" />
-            </div>
-          </div>
-          <div>
-            <img src={OfficeImage} alt="" />
-          </div>
+        <div className="grid sm:grid-cols-3 grid-cols-1 gap-3 mt-10 py-5">
+          {kitchen?.map((item) => {
+            return (
+              <img
+                src={item?.image}
+                alt=""
+                className="w-full h-full rounded-md p-3 shadow-md bg-white"
+              />
+            );
+          })}
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        <div className="flex sm:flex-nowrap flex-wrap gap-3 mt-10">
-          <div className="flex sm:flex-nowrap flex-wrap gap-3 flex-col">
-            <div className="flex sm:flex-nowrap flex-wrap gap-3">
-              <img src={LivingRoomImage} alt="" />
-              <img src={KitchenImage} alt="" />
-            </div>
-            <div>
-              <img src={RoomImage} alt="" />
-            </div>
-          </div>
-          <div>
-            <img src={OfficeImage} alt="" />
-          </div>
+        <div className="grid sm:grid-cols-3 grid-cols-1 gap-3 mt-10 py-5">
+          {roomInterior?.map((item) => {
+            return (
+              <img
+                src={item?.image}
+                alt=""
+                className="w-full h-full rounded-md p-3 shadow-md bg-white"
+              />
+            );
+          })}
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
-        <div className="flex sm:flex-nowrap flex-wrap gap-3 mt-10">
-          <div className="flex sm:flex-nowrap flex-wrap gap-3 flex-col">
-            <div className="flex sm:flex-nowrap flex-wrap gap-3">
-              <img src={LivingRoomImage} alt="" />
-              <img src={KitchenImage} alt="" />
-            </div>
-            <div>
-              <img src={RoomImage} alt="" />
-            </div>
-          </div>
-          <div>
-            <img src={OfficeImage} alt="" />
-          </div>
+        <div className="grid sm:grid-cols-3 grid-cols-1 gap-3 mt-10 py-5">
+          {officeInterior?.map((item) => {
+            return (
+              <img
+                src={item?.image}
+                alt=""
+                className="w-full h-full rounded-md p-3 shadow-md bg-white"
+              />
+            );
+          })}
         </div>
       </CustomTabPanel>
     </Box>

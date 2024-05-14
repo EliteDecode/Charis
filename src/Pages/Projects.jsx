@@ -15,12 +15,16 @@ import InteriorCategories from "../ui/InteriorCategories.jsx";
 import ProjectBanner from "../ui/Projects/ProjectsBanner.jsx";
 import ProjectsSlide from "../ui/Projects/ProjectsSlide.jsx";
 import { useEffect } from "react";
+import { getProjects } from "@/features/projects/projectSlice.js";
+import { useDispatch } from "react-redux";
 
 // Images
 
 function Projects() {
+  const dispatch = useDispatch();
   useEffect(() => {
     window.scrollTo(0, 0);
+    dispatch(getProjects());
   }, []);
   return (
     <div className="">

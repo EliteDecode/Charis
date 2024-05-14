@@ -1,5 +1,6 @@
 import ViewMoreImage from "/Group 4 (1).png";
 import TabsGallery from "../helpers/TabsGallary";
+import { Link } from "react-router-dom";
 
 function ProjectGalleryHome() {
   return (
@@ -17,13 +18,15 @@ function ProjectGalleryHome() {
           continual expansion.
         </p>
       </div>
-      <div className="mt-5">
+      <div className="mt-5 py-5">
         <TabsGallery />
       </div>
-      <div className="flex items-center justify-center gap-6 cursor-pointer mt-5">
-        <p className="text-black text-[18px] font-normal">View More</p>
-        <img src={ViewMoreImage} alt="" className="cursor-pointer" />
-      </div>
+      <Link to="/gallery">
+        <div className="flex items-center justify-center gap-6 cursor-pointer mt-5">
+          <p className="text-black text-[18px] font-normal">View More</p>
+          <img src={ViewMoreImage} alt="" className="cursor-pointer" />
+        </div>
+      </Link>
     </div>
   );
 }

@@ -27,6 +27,9 @@ import Payment from "./Pages/Payment";
 import Settings from "./Pages/Settings";
 import Welcome from "./Pages/Welcome";
 import { useEffect, useLayoutEffect, useState } from "react";
+import ProtectedRoutes from "./utils/ProtectedRoutes";
+import Wishlist from "./Pages/Wishlist";
+import SingleOrder from "./Pages/SingleOrder";
 
 function App() {
   const [firstLaunch, setFirstLaunch] = useState(true);
@@ -39,8 +42,6 @@ function App() {
   useLayoutEffect(() => {
     checkFirstLaunch();
   }, []);
-
-  console.log(firstLaunch);
   return (
     <BrowserRouter>
       <Routes>
@@ -63,17 +64,21 @@ function App() {
             <Route path="gallery" element={<Gallery />} />
             <Route path="shop" element={<Shop />} />
             <Route path="cart" element={<Cart />} />
+            <Route path="wishlist" element={<Wishlist />} />
             <Route path="billing" element={<Billing />} />
             <Route path="payments" element={<PaymentMethods />} />
             <Route path="shop/:productId" element={<SingleProduct />} />
             <Route path="contact" element={<Contact />} />
             {/* Define another outlet for the account page */}
-            <Route element={<Account />}>
-              <Route path="account" element={<AccountDeatils />} />
-              <Route path="notifications" element={<Notifications />} />
-              <Route path="orders/*" element={<Orders />} />
-              <Route path="payment" element={<Payment />} />
-              <Route path="Settings" element={<Settings />} />
+            <Route element={<ProtectedRoutes />}>
+              <Route element={<Account />}>
+                <Route path="account" element={<AccountDeatils />} />
+                <Route path="notifications" element={<Notifications />} />
+                <Route path="orders" element={<Orders />} />
+                <Route path="orders/:orderId" element={<SingleOrder />} />
+                <Route path="payment" element={<Payment />} />
+                <Route path="Settings" element={<Settings />} />
+              </Route>
             </Route>
           </Route>
         )}

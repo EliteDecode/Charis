@@ -1,16 +1,31 @@
 import PropTypes from "prop-types"; // Import PropTypes from prop-types package
-import { FaAngleDown, FaHamburger } from "react-icons/fa";
+import { FaAngleDown, FaHamburger, FaUser } from "react-icons/fa";
 import { NavLink, useLocation } from "react-router-dom";
 import logoImg from "/Chariz Interiors 1.png";
 import userImg from "/user.png";
 import lineImg from "/Line 4.png";
 import searchImg from "/search-01.png";
-import { Menu } from "@mui/material";
+import { Box, Menu } from "@mui/material";
 import { MdMenu } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
+import { useSelector } from "react-redux";
+import {
+  Person2Outlined,
+  SearchOutlined,
+  ShoppingCart,
+  ShoppingCartOutlined,
+} from "@mui/icons-material";
+import { BsHeart } from "react-icons/bs";
 
 function Nav({ setIsOpen }) {
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.userAuth
+  );
+
+  const { items, count } = useSelector((state) => state.cart);
+  const { count: wishlistCount } = useSelector((state) => state.wishlist);
+
   function handleClick() {
     setIsOpen(true);
   }
@@ -43,7 +58,7 @@ function Nav({ setIsOpen }) {
     <div className="sticky top-0 z-50 bg-white" onClick={closeMenus}>
       <div className="relative">
         <nav className="flex items-center justify-between w-full px-2 py-4 sm:px-20 ">
-          <a href="/" className="sm:w-[10%] w-[40%]">
+          <a href="/" className="sm:w-[10%] w-[25%] sm:mt-0 -mt-4">
             <img className="cursor-pointer " src={logoImg} alt="Logo" />
           </a>
           <div className="flex items-center gap-24">
@@ -119,22 +134,44 @@ function Nav({ setIsOpen }) {
                   Contact
                 </li>
               </NavLink>
-              <NavLink to="login">
-                <li className="hover:text-[#FFC50A] cursor-pointer">Login</li>
-              </NavLink>
+              {!user && (
+                <NavLink to="login">
+                  <li className="hover:text-[#FFC50A] cursor-pointer">Login</li>
+                </NavLink>
+              )}
             </ul>
 
-            <div className="flex items-center gap-4 mb-5">
+            <div className="flex items-center gap-2 mb-5">
               <NavLink to="account">
-                <img className="cursor-pointer" src={userImg} alt="User" />
+                <Person2Outlined />
               </NavLink>
               <img src={lineImg} alt="Line" />
-              <img
-                className="cursor-pointer"
+              <SearchOutlined onClick={handleClick} />
+
+              {/* <img
+                className="cursor-pointer w-[14%]"
                 src={searchImg}
                 alt="Search"
                 onClick={handleClick}
-              />
+              /> */}
+              <img src={lineImg} alt="Line" />
+              <NavLink to="cart">
+                <Box className="relative">
+                  <ShoppingCartOutlined />
+                  <span className="absolute -top-0.5 bg-gray-900 text-white rounded-full py-0 px-0.5 -right-0.5 text-[8px]">
+                    {count}
+                  </span>
+                </Box>
+              </NavLink>
+              <img src={lineImg} alt="Line" />
+              <NavLink to="wishlist">
+                <Box className="relative">
+                  <BsHeart style={{ fontWeight: "bold" }} />
+                  <span className="absolute -top-1.5 bg-yellow-500 text-white rounded-full py-0 px-0.5 -right-0.5 text-[8px]">
+                    {wishlistCount}
+                  </span>
+                </Box>
+              </NavLink>
               <img src={lineImg} alt="Line" className="block md:hidden" />
               <MdMenu
                 size={35}

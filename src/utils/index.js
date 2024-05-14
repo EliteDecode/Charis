@@ -227,3 +227,66 @@ export const creditCards = [
     cardNumber: 5334720862838352,
   },
 ];
+
+export const billingFormFields = [
+  {
+    name: "firstname",
+    label: "First Name",
+    placeholder: "Enter your first name",
+    type: "text",
+  },
+  {
+    name: "lastname",
+    label: "Last Name",
+    placeholder: "Enter your last name",
+    type: "text",
+  },
+  {
+    name: "phone",
+    label: "Phone Number",
+    placeholder: "Enter your phone number",
+    type: "tel",
+  },
+  {
+    name: "email",
+    label: "Email",
+    placeholder: "Enter your email",
+    type: "email",
+  },
+  {
+    name: "company_name",
+    label: "Company Name",
+    placeholder: "Enter your company name",
+    type: "text",
+  },
+  {
+    name: "street_address",
+    label: "Street Address",
+    placeholder: "Enter your street address",
+    type: "text",
+  },
+  {
+    name: "town_city",
+    label: "Town/City",
+    placeholder: "Enter your town or city",
+    type: "text",
+  },
+  {
+    name: "state",
+    label: "State",
+    placeholder: "Enter your state",
+    type: "text",
+  },
+  {
+    name: "country",
+    label: "Country",
+    placeholder: "Enter your country",
+    type: "text",
+  },
+  {
+    name: "zip_code",
+    label: "Zip Code",
+    placeholder: "Enter your zip code",
+    type: "text",
+  },
+];

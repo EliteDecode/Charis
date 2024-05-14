@@ -31,7 +31,11 @@ function ServicesSection() {
                 Residential Interior Design
               </h1>
               <div className="overflow-hidden relative">
-                <img src={serviceImage1} alt="" className="imageService" />
+                <img
+                  src={serviceImage1}
+                  alt=""
+                  className="imageService w-full"
+                />
                 <div className="transform translate-y-96 group-hover:translate-y-0 transition-all duration-300 absolute w-full h-full servicediv top-0 p-5 flex flex-col items-center justify-center">
                   <p className="text-white text-[11px]">
                     We believe in active collaboration with our clients through
@@ -53,7 +57,11 @@ function ServicesSection() {
                 Residential Interior Design
               </h1>
               <div className="overflow-hidden relative">
-                <img src={serviceImage2} alt="" className="imageService" />
+                <img
+                  src={serviceImage2}
+                  alt=""
+                  className="imageService w-full"
+                />
                 <div className="transform translate-y-96 group-hover:translate-y-0 transition-all duration-300 absolute w-full h-full servicediv top-0 p-5 flex flex-col items-center justify-center">
                   <p className="text-white text-[11px]">
                     We believe in active collaboration with our clients through
@@ -75,7 +83,11 @@ function ServicesSection() {
                 Residential Interior Design
               </h1>
               <div className="overflow-hidden relative">
-                <img src={serviceImage3} alt="" className="imageService" />
+                <img
+                  src={serviceImage3}
+                  alt=""
+                  className="imageService w-full"
+                />
                 <div className="transform translate-y-96 group-hover:translate-y-0 transition-all duration-300 absolute w-full h-full servicediv top-0 p-5 flex flex-col items-center justify-center">
                   <p className="text-white text-[11px]">
                     We believe in active collaboration with our clients through
@@ -97,7 +109,11 @@ function ServicesSection() {
                 Residential Interior Design
               </h1>
               <div className="overflow-hidden relative">
-                <img src={serviceImage4} alt="" className="imageService" />
+                <img
+                  src={serviceImage4}
+                  alt=""
+                  className="imageService w-full"
+                />
                 <div className="transform translate-y-96 group-hover:translate-y-0 transition-all duration-300 absolute w-full h-full servicediv top-0 p-5 flex flex-col items-center justify-center">
                   <p className="text-white text-[11px]">
                     We believe in active collaboration with our clients through

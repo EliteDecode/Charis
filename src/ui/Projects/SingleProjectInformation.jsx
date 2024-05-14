@@ -1,28 +1,29 @@
 import { Share } from "@mui/icons-material";
 import { Box, Grid } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
-const SingleProjectInformation = () => {
+const SingleProjectInformation = ({ data, projects }) => {
   const projectInfo = [
-    { label: "Project Name:", value: "Bon Hotels" },
-    { label: "Architect:", value: "Mr John Jummie" },
-    { label: "Designer:", value: "Mr Peterson" },
-    { label: "Concept:", value: "Minimalistic Designs" },
-    { label: "Location:", value: "Abuja" },
-    { label: "Date:", value: "1/02/2024 - 5/05/2024" },
+    { label: "Project Name:", value: data?.name },
+    { label: "Architect:", value: data?.architect },
+    { label: "Designer:", value: data?.designer },
+    { label: "Concept:", value: data?.concept },
+    { label: "Location:", value: data?.location },
+    { label: "Date:", value: data?.date },
   ];
-  const projects = [
-    "Bon Hotels",
-    "AirBNB Projects",
-    "Tech Innovations Hub",
-    "Smart City Initiative",
-    "E-commerce Platform Upgrade",
-    "Healthcare Management System",
-    "Education Portal Redesign",
-    "Financial Services App",
-    "AI-driven Customer Support",
-    "Blockchain Integration Project",
-  ];
+  // const projects = [
+  //   "Bon Hotels",
+  //   "AirBNB Projects",
+  //   "Tech Innovations Hub",
+  //   "Smart City Initiative",
+  //   "E-commerce Platform Upgrade",
+  //   "Healthcare Management System",
+  //   "Education Portal Redesign",
+  //   "Financial Services App",
+  //   "AI-driven Customer Support",
+  //   "Blockchain Integration Project",
+  // ];
 
   return (
     <div className="mt-12">
@@ -67,9 +68,11 @@ const SingleProjectInformation = () => {
               </p>
               <Box className="space-y-3 mt-5">
                 {projects.map((project, index) => (
-                  <p className="text-[13px] mt-1 text-[#777777]" key={index}>
-                    {project}
-                  </p>
+                  <a href={`/projects/${project.id}`} key={index}>
+                    <p className="text-[13px] mt-1 text-[#777777]">
+                      {project.name}
+                    </p>
+                  </a>
                 ))}
               </Box>
             </Box>

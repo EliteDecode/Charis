@@ -11,12 +11,20 @@ import TheArtOfBeautifulLiving from "../ui/TheArtOfBeautifulLiving.jsx";
 import ServicesSection from "../ui/ServicesSection.jsx";
 import AboutSection from "../ui/About/AboutSection.jsx";
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getGallery } from "@/features/gallery/gallerySlice.js";
+import { getProjects } from "@/features/projects/projectSlice.js";
+import { getProducts } from "@/features/products/productSlice.js";
 
 // Images
 
 function Homepage() {
+  const dispatch = useDispatch();
   useEffect(() => {
     window.scrollTo(0, 0);
+    dispatch(getGallery());
+    dispatch(getProjects());
+    dispatch(getProducts());
   }, []);
   return (
     <div className="">
