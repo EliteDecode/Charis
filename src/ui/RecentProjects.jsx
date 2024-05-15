@@ -10,6 +10,7 @@ import { responsiveCarousel } from "../utils";
 import { BsCaretRight } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Loader from "@/utils/Loader";
 
 function RecentProjects() {
   const { projects, isLoading, isError, isSuccess, message } = useSelector(
@@ -62,41 +63,47 @@ function RecentProjects() {
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px">
-        {projects?.data?.map((item, index) => {
-          const images = projects && JSON.parse(item?.images);
-          return (
-            <Link to={`/projects/${item?.id}`}>
-              <div className="p-3">
-                <div className="h-[80vh] " key={index}>
-                  <img
-                    src={images?.[0]}
-                    alt=""
-                    className="w-full border rounded-md shadow-md h-[70%]"
-                  />
-                  <div className="flex items-center mt-3 justify-between mb-10">
-                    <h1 className="sm:text-[16px] text-[12px] ">
-                      {" "}
-                      {item?.name?.length > 10
-                        ? `${item?.name?.slice(0, 10)}...`
-                        : item?.name}
-                    </h1>
-                    <div className="flex justify-end items-center sm:gap-6 gap-1 cursor-pointer">
-                      <p className="text-black sm:text-[16px] text-[12px] font-normal">
-                        View Project
-                      </p>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <>
+            {projects?.data?.map((item, index) => {
+              const images = projects && JSON.parse(item?.images);
+              return (
+                <Link to={`/projects/${item?.id}`}>
+                  <div className="p-3">
+                    <div className="h-[80vh] " key={index}>
                       <img
-                        src={groupIcon}
+                        src={images?.[0]}
                         alt=""
-                        className="cursor-pointer sm:w-[25%] w-[20%]"
+                        className="w-full border rounded-md shadow-md h-[70%]"
                       />
+                      <div className="flex items-center mt-3 justify-between mb-10">
+                        <h1 className="sm:text-[16px] text-[12px] ">
+                          {" "}
+                          {item?.name?.length > 10
+                            ? `${item?.name?.slice(0, 10)}...`
+                            : item?.name}
+                        </h1>
+                        <div className="flex justify-end items-center sm:gap-6 gap-1 cursor-pointer">
+                          <p className="text-black sm:text-[16px] text-[12px] font-normal">
+                            View Project
+                          </p>
+                          <img
+                            src={groupIcon}
+                            alt=""
+                            className="cursor-pointer sm:w-[25%] w-[20%]"
+                          />
+                        </div>
+                      </div>
+                      <div className="mb-16"></div>
                     </div>
                   </div>
-                  <div className="mb-16"></div>
-                </div>
-              </div>
-            </Link>
-          );
-        })}
+                </Link>
+              );
+            })}
+          </>
+        )}
       </Carousel>
     </div>
   );
