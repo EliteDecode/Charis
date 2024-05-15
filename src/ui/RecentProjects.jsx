@@ -77,7 +77,7 @@ function RecentProjects() {
                     <h1 className="sm:text-[16px] text-[12px] ">
                       {" "}
                       {item?.name?.length > 10
-                        ? `${item.name.slice(0, 10)}...`
+                        ? `${item?.name?.slice(0, 10)}...`
                         : item?.name}
                     </h1>
                     <div className="flex justify-end items-center sm:gap-6 gap-1 cursor-pointer">

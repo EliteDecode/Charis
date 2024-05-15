@@ -60,25 +60,25 @@ function ShopImage() {
                     <div className="py-2 overflow-hidden">
                       <img
                         className="w-full sm:h-[35vh] h-[30vh] transform transition-transform duration-300 group-hover:scale-110"
-                        src={item.product_image}
+                        src={item?.product_image}
                         alt=""
                       />
                     </div>
                     <div className="flex items-center justify-between gap-12 mt-3">
                       <h1 className="text-[17px] leading-[25.64px]  font-bold">
-                        {item.product_name.length > 15
-                          ? `${item.product_name.slice(0, 10)}...`
-                          : item.product_name}
+                        {item?.product_name?.length > 15
+                          ? `${item?.product_name?.slice(0, 10)}...`
+                          : item?.product_name}
                       </h1>
                       <p className="text-[17px]">
-                        $<span>{item.price}</span>
+                        $<span>{item?.price}</span>
                       </p>
                     </div>
 
                     <div
                       className="flex flex-row opacity-0 items-center gap-1 mt-5 flex-grow justify-between transition-all 
                     duration-300 group-hover:opacity-100 absolute inset-x-0 bottom-0 bg-white p-4 transform translate-y-4 group-hover:translate-y-0">
-                      <Link to={`/shop/${item.id}`}>
+                      <Link to={`/shop/${item?.id}`}>
                         <button className="w-48 bg-yellow-300 h-10">
                           Add to cart
                         </button>
