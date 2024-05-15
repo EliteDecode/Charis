@@ -65,7 +65,7 @@ function RecentProjects() {
         {projects?.data?.map((item, index) => {
           const images = JSON.parse(item?.images);
           return (
-            <Link to={`/projects/${item.id}`}>
+            <Link to={`/projects/${item?.id}`}>
               <div className="p-3">
                 <div className="h-[80vh] " key={index}>
                   <img
