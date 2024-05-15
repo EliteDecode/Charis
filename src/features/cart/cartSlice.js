@@ -1,41 +1,55 @@
-import db, { getAllItemsFromCart } from "@/utils/db";
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { getAllItemsFromCart } from "@/utils/db"; // Assuming this imports the function to fetch items from the cart
 
-const items = await getAllItemsFromCart();
-
-const initialState = {
-  items: items ? items : [], // Array to store cart items
-  count: items ? items?.length : 0, // Initial product count in cart
-};
+// Define an async thunk to fetch initial cart items
+export const fetchInitialCartItems = createAsyncThunk(
+  "cart/fetchInitialCartItems",
+  async () => {
+    try {
+      const items = await getAllItemsFromCart();
+      return items ? items : [];
+    } catch (error) {
+      console.error("Error fetching initial cart items:", error);
+      return [];
+    }
+  }
+);
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState,
+  initialState: {
+    items: [],
+    count: 0,
+    status: "idle", // Add a status field to track the async operation status
+  },
   reducers: {
     addItem(state, action) {
-      state.items.push(action.payload); // Add item to cart
-      state.count += 1; // Increase product count
+      state.items.push(action.payload);
+      state.count += 1;
     },
     removeItem(state, action) {
-      state.items = state.items.filter((item) => item.id !== action.payload.id); // Remove item from cart
-      state.count -= 1; // Decrease product count
+      state.items = state.items.filter((item) => item.id !== action.payload.id);
+      state.count -= 1;
     },
     clearCart(state) {
-      state.items = []; // Clear cart items
-      state.count = 0; // Reset product count
+      state.items = [];
+      state.count = 0;
     },
-    initializeFromDB(state, action) {
-      // Check if items exist in DexieDB on initial load
-      db.cart.toArray().then((items) => {
-        if (items.length > 0) {
-          state.items = items; // Update cart items
-          state.count = items.length; // Update product count
-        }
-      });
-    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchInitialCartItems.fulfilled, (state, action) => {
+      state.items = action.payload;
+      state.count = action.payload.length;
+      state.status = "succeeded";
+    });
+    builder.addCase(fetchInitialCartItems.pending, (state) => {
+      state.status = "loading";
+    });
+    builder.addCase(fetchInitialCartItems.rejected, (state) => {
+      state.status = "failed";
+    });
   },
 });
 
-export const { addItem, removeItem, clearCart, initializeFromDB } =
-  cartSlice.actions;
-export default cartSlice.reducer;
+export const { addItem, removeItem, clearCart } = cartSlice.actions;
+export const cartReducer = cartSlice.reducer;

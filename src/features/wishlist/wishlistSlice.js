@@ -1,45 +1,56 @@
-import { getAllItemsFromWishlist } from "@/utils/db";
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { getAllItemsFromWishlist } from "@/utils/db"; // Assuming this imports the function to fetch items from the wishlist
 
-const items = await getAllItemsFromWishlist();
-
-const initialState = {
-  items: items ? items : [], // Array to store wishlist items
-  count: items ? items?.length : 0, // Initial product count in wishlist
-};
+// Define an async thunk to fetch initial wishlist items
+export const fetchInitialWishlistItems = createAsyncThunk(
+  "wishlist/fetchInitialWishlistItems",
+  async () => {
+    try {
+      const items = await getAllItemsFromWishlist();
+      return items ? items : [];
+    } catch (error) {
+      console.error("Error fetching initial wishlist items:", error);
+      return [];
+    }
+  }
+);
 
 const wishlistSlice = createSlice({
   name: "wishlist",
-  initialState,
+  initialState: {
+    items: [],
+    count: 0,
+    status: "idle", // Add a status field to track the async operation status
+  },
   reducers: {
     addItemWishlist(state, action) {
-      state.items.push(action.payload); // Add item to wishlist
-      state.count += 1; // Increase product count
+      state.items.push(action.payload);
+      state.count += 1;
     },
     removeItemWishlist(state, action) {
-      state.items = state.items.filter((item) => item.id !== action.payload.id); // Remove item from wishlist
-      state.count -= 1; // Decrease product count
+      state.items = state.items.filter((item) => item.id !== action.payload.id);
+      state.count -= 1;
     },
     clearWishlist(state) {
-      state.items = []; // Clear wishlist items
-      state.count = 0; // Reset product count
+      state.items = [];
+      state.count = 0;
     },
-    initializeFromDB(state, action) {
-      // Check if items exist in DexieDB on initial load
-      db.wishlist.toArray().then((items) => {
-        if (items.length > 0) {
-          state.items = items; // Update wishlist items
-          state.count = items.length; // Update product count
-        }
-      });
-    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchInitialWishlistItems.fulfilled, (state, action) => {
+      state.items = action.payload;
+      state.count = action.payload.length;
+      state.status = "succeeded";
+    });
+    builder.addCase(fetchInitialWishlistItems.pending, (state) => {
+      state.status = "loading";
+    });
+    builder.addCase(fetchInitialWishlistItems.rejected, (state) => {
+      state.status = "failed";
+    });
   },
 });
 
-export const {
-  addItemWishlist,
-  removeItemWishlist,
-  clearWishlist,
-  initializeFromDB,
-} = wishlistSlice.actions;
-export default wishlistSlice.reducer;
+export const { addItemWishlist, removeItemWishlist, clearWishlist } =
+  wishlistSlice.actions;
+export const wishlistReducer = wishlistSlice.reducer;
