@@ -63,13 +63,13 @@ function RecentProjects() {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px">
         {projects?.data?.map((item, index) => {
-          const images = JSON.parse(item?.images);
+          const images = projects && JSON.parse(item?.images);
           return (
             <Link to={`/projects/${item?.id}`}>
               <div className="p-3">
                 <div className="h-[80vh] " key={index}>
                   <img
-                    src={images[0]}
+                    src={images?.[0]}
                     alt=""
                     className="w-full border rounded-md shadow-md h-[70%]"
                   />

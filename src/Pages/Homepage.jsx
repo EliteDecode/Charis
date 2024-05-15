@@ -45,7 +45,7 @@ function Homepage() {
         <ImageGallery />
 
         {/* Our Recent Projects section */}
-        <RecentProjects />
+        {/* <RecentProjects /> */}
 
         {/* Project Gallery section */}
         <ProjectGalleryHome />
