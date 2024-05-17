@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-export const API_URL = "http://chariz.digicreeb.com/api";
+export const API_URL = "https://chariz.digicreeb.com/api";
 
 const handleAsyncError = (error, thunkAPI) => {
   const message =
