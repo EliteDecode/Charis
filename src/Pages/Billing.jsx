@@ -13,9 +13,6 @@ function Billing() {
   const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (items?.length < 1) {
-      navigate("/cart");
-    }
   }, []);
 
   return (
